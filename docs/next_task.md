@@ -1,18 +1,19 @@
 # Approved Next Task
 
-## Resolve Context Projection
+## Deploy Type-Scale Revision
 
-CU1 - Static Resume Landing Page v1 is merged, deployed, and production-verified at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. It is not closed because Context Projection remains required and pending.
+CU1 - Static Resume Landing Page v1 is live. Keanan's requested 25% global text reduction and 50% hero-name reduction are verified on `codex/reduce-type-scale` and ready to deploy. Context Projection remains required after deployment.
 
 ### Objective
 
-Project the final repository, public URL, project status, and portfolio registry changes into the required external context, or obtain explicit approval to defer that projection. Only then reconcile CU1 as closed.
+Merge and deploy the verified type-scale revision, confirm the exact computed sizes and clean behavior on the public URL, then return to Context Projection as the only remaining CU1 governance item.
 
 ### Review evidence
 
 - Full implementation: `index.html`, `styles.css`, and `script.js`
 - Content integrity: `node scripts/verify-content.mjs` passes for 114 source fragments and 16 approved links
-- Desktop scale: 1440px now uses 20px body copy with a 33px line height, a 112px hero name, 58px section headings, 34px company/project headings, and 22px project evidence; 1024px uses an 18px/50px tier
+- Type scale: every non-hero font size is exactly 75% of its prior value; the hero full name is exactly 50% at every breakpoint
+- Desktop scale: 1440px now uses 15px body copy, a 56px hero name, 43.5px section headings, 25.5px company/project headings, and 16.5px project evidence
 - Browser QA: Playwright passed at 1440px, 1024px, 768px, 375px, and 320px with no overflow, out-of-bounds elements, broken assets, failed requests, or console errors; the long toolkit heading preserves whole words at narrow widths
 - Content order: Featured Projects precedes Professional Experience in the DOM, navigation, hero index, section numbering, and print output
 - Project heroes: the official high-resolution Pi8 visual and two brand marks load without problematic clipping at all approved widths; provenance, dimensions, hashes, and usage constraints are recorded in `assets/projects/README.md`
@@ -25,7 +26,7 @@ Project the final repository, public URL, project status, and portfolio registry
 
 ### Exact next action
 
-Complete Context Projection for the confirmed public site and repository, or explicitly approve deferral. Then update the four state files to close CU1 if all completion rules are satisfied.
+Merge `codex/reduce-type-scale`, wait for GitHub Pages to rebuild, and repeat the five-viewport production assertions. Then restore Context Projection as the exact next governance action.
 
 ### Do not do
 

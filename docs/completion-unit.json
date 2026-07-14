@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "id": "CU1",
   "title": "Static Resume Landing Page v1",
   "status": "launched-awaiting-context-projection",
@@ -29,8 +29,8 @@
     ]
   },
   "implementation": {
-    "status": "deployed-and-production-verified",
-    "branch": "main",
+    "status": "deployed-with-verified-type-scale-update-ready",
+    "branch": "codex/reduce-type-scale",
     "preview": "http://127.0.0.1:4173/",
     "publicUrl": "https://lafayeti-dev.github.io/keanan-wilson-resume/",
     "files": [
@@ -48,7 +48,7 @@
   },
   "verification": {
     "status": "passed-on-production",
-    "verifiedAt": "2026-07-14T22:24:25+07:00",
+    "verifiedAt": "2026-07-14T22:52:47+07:00",
     "commands": [
       {
         "command": "git diff --check",
@@ -58,7 +58,7 @@
       {
         "command": "python3 -m http.server 4173",
         "status": "passed",
-        "evidence": "Local preview served at http://127.0.0.1:4173/; index, cache-versioned styles.css?v=20260714-4, script.js, project assets, and retained PDF returned HTTP 200."
+        "evidence": "Local preview served at http://127.0.0.1:4173/; index, cache-versioned styles.css?v=20260714-5, script.js, project assets, and retained PDF returned HTTP 200."
       },
       {
         "command": "node scripts/verify-content.mjs",
@@ -78,17 +78,17 @@
       {
         "command": "Playwright 1.61.1 Chromium assertions at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720",
         "status": "passed",
-        "evidence": "The final desktop scale measured 20px body copy with a 33px line height, 112px hero type, 58px section headings, 34px company/project headings, and 22px project evidence at 1440px. The 1024px tier measured 18px body copy, 50px section headings, 30px company/project headings, and 20px project evidence. Tablet, mobile, and minimum widths measured 17px body copy and 18px project evidence. Every viewport reported zero horizontal overflow or out-of-bounds elements, zero broken images, zero failed requests, and zero console warnings or errors."
+        "evidence": "Every non-hero font-size declaration is exactly 75% of the prior value, while every hero-name font-size declaration is exactly 50%. At 1440px this measured 15px body copy, 56px hero type, 43.5px section headings, 25.5px company/project headings, and 16.5px project evidence. At 1024px it measured 13.5px body copy, 48px hero type, 37.5px section headings, and 15px project evidence. Every viewport reported zero horizontal overflow or out-of-bounds elements, zero broken images, zero failed requests, and zero console warnings or errors."
       },
       {
         "command": "npx --no-install playwright screenshot --browser chromium --viewport-size <width,height> --wait-for-timeout 2200 http://127.0.0.1:4173/?qa=<viewport>#<section> <output.png>",
         "status": "passed",
-        "evidence": "Playwright 1.61.1 CLI screenshots completed for the 1440x1000 hero, Featured Projects, and Professional Experience plus Featured Projects at 768x1024 and 375x812. All five were visually reviewed; the near-full-width desktop shell, larger system typography, project-first sequence, and mobile composition showed no image, heading, or copy overlap."
+        "evidence": "Playwright 1.61.1 CLI screenshots completed for the revised 1440x1000 hero and 375x812 mobile hero. Both were visually reviewed; the exact proportional type reduction retained hierarchy, whole-word wrapping, and stable controls without overlap."
       },
       {
         "command": "GitHub Pages project-path simulation at /keanan-wilson-resume/ on temporary port 4174",
         "status": "passed",
-        "evidence": "Page, cache-versioned stylesheet, script, Pi8 visual, both project logos, and retained PDF asset returned HTTP 200 under the project prefix; server logs confirmed each exact request and the relative asset paths remained project-path compatible."
+        "evidence": "Page, cache-versioned styles.css?v=20260714-5, and script returned HTTP 200 under the project prefix; unchanged project and PDF asset paths remain project-path compatible."
       },
       {
         "command": "GitHub Pages production build and live Playwright verification",
@@ -102,14 +102,14 @@
       }
     ],
     "manualChecks": [
-      "Desktop readability was re-art-directed without altering authoritative content: the 1440px shell now uses 32px page gutters, primary body copy is 20px with a 33px line height, project evidence is 22px, section headings are 58px, experience and project headings are 34px, and the hero name is 112px.",
+      "Keanan's requested proportional reduction is exact: all text is 25% smaller and the hero full name is 50% smaller. At 1440px, body copy is 15px, project evidence is 16.5px, section headings are 43.5px, company/project headings are 25.5px, and the hero name is 56px.",
       "Featured Projects precedes Professional Experience in the DOM, primary navigation, hero index, section numbering, visual order, and print order.",
       "The live GitHub Pages hero was captured at 1440x1000 and visually matched the verified local design with the final system typography and project-first navigation.",
       "Keyboard Tab order begins with the visible skip link; skip activation transfers focus to Summary; all sampled focus outlines were solid and 3px.",
       "Mobile menu opens, reports aria-expanded=true, closes on Escape, and returns focus to the Menu button.",
       "Internal navigation lands below the sticky header; the final DOM contains no PDF links, download attributes, or visible download controls.",
       "Sampled text contrast ranged from 5.88:1 to 14.73:1; reduced-motion media changed smooth scrolling to auto and reduced transitions to 0.01ms.",
-      "Print media rendered as an eight-page Letter PDF 1.4 file; all eight rendered pages were visually inspected with Featured Projects before Professional Experience, black text, hidden navigation/footer controls, and project heroes omitted while project headings and evidence copy remained present.",
+      "Print media rendered as a six-page Letter PDF 1.4 file after the proportional text reduction; all six rendered pages were visually inspected with Featured Projects before Professional Experience, black text, hidden navigation/footer controls, and no clipping or broken glyphs.",
       "The approved PDF is a four-page PDF 1.4 file with SHA-256 e86a5b4d27a6ecad78401426823acd168e21b54defb6b736fb9757cd0e7e46d6.",
       "The meaningful Pi8 product image uses concise alternative text; the Polk Audio and Angostura logo-only heroes remain decorative because adjacent H3 headings expose their names. The final DOM contains one H1, an ordered H1-H3 hierarchy, and no duplicate IDs.",
       "The Skin Element is no longer a featured module, while its Professional Experience bullet remains unchanged and identifies the work as a completed, unreleased Shopify ecommerce rebuild."
@@ -117,6 +117,7 @@
     "limitations": [
       "Automated external-link requests returned HTTP 200 for the new Pi8 destination and previously returned HTTP 200 for 5 other authoritative destinations and HTTP 403 for 10 brand or Upwork destinations; no checked URL returned 404 or 410. The exact approved source links remain present.",
       "The Polk wordmark is a high-resolution local asset whose original download metadata points to a third-party logo archive rather than an official media kit; the local and recorded online copies match by SHA-256. Replace it if Polk supplies an approved official press asset.",
+      "The verified type-scale revision is not yet deployed at the time of this evidence record; the public site continues serving the prior production build until this branch is merged and Pages rebuilds.",
       "Context Projection remains required and has not yet been completed or explicitly deferred with approval, so CU1 is launched but not claimed closed."
     ]
   },
