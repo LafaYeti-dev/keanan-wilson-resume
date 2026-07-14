@@ -1,42 +1,28 @@
 # Approved Next Task
 
-## CU1 - Static Resume Landing Page v1
+## Review CU1 pull request
 
-Use Codex locally in:
-
-`/Users/keananwilson/Github Projects/keanan-wilson-resume`
+CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resume-landing-page-v1`. It is ready for review and is not closed or merged.
 
 ### Objective
 
-Implement the complete first version of the GitHub Pages resume landing page using the approved content and project constraints.
+Review the pull request against `main`, compare the complete page with `source/resume-content.md`, inspect the responsive design and archived Skin Element labeling, and either approve it or request focused changes.
 
-### Required startup
+### Review evidence
 
-1. Pull `main` from `origin`.
-2. Read `AGENTS.md`, `README.md`, `docs/completion-unit.json`, `docs/context_current_state.md`, `docs/handoff_log.md`, `docs/next_task.md`, and `source/resume-content.md`.
-3. Confirm the PDF exists at `assets/resume/keanan-wilson-resume.pdf`.
-4. Inspect any supplied assets.
-5. Run the baseline checks.
-6. Create a focused feature branch before implementation.
+- Full implementation: `index.html`, `styles.css`, and `script.js`
+- Content integrity: `node scripts/verify-content.mjs` passes for 111 source fragments and 15 approved links
+- Browser QA: Playwright passed at 1440px, 768px, and 375px with no overflow, console errors, page errors, or failed local requests
+- PDF: `assets/resume/keanan-wilson-resume.pdf` returns HTTP 200 and downloads as `keanan-wilson-resume.pdf`
+- GitHub Pages: relative paths passed a local `/keanan-wilson-resume/` project-prefix simulation
+- Context Projection: required and `pending-launch`
 
-### Approved implementation
+### Exact next action
 
-- `index.html`
-- `styles.css`
-- minimal `script.js`
-- local public-safe assets
-- lean verification support where useful
-- GitHub Pages-compatible relative paths
+Keanan reviews the open CU1 pull request. Do not merge it as part of the implementation handoff.
 
-### Required output
-
-- Complete responsive site
-- Verification evidence
-- Updated state and handoff files
-- Pull request against `main`
+After approval and merge, verify the live GitHub Pages project URL, reconcile `docs/completion-unit.json`, `docs/context_current_state.md`, `docs/handoff_log.md`, and `docs/next_task.md` on `main`, then complete or explicitly defer Context Projection with approval.
 
 ### Do not do
 
-Do not change approved resume content, introduce a framework or build system, add tracking or external services, generate imagery, or publish private client material.
-
-Use the concise Codex prompt provided with the current project handoff.
+Do not select another roadmap item, change approved resume content, add unapproved imagery or services, claim CU1 is closed before merge and production verification, or project a public URL before it is confirmed.

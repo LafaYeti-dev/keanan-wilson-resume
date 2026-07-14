@@ -1,10 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "id": "CU1",
   "title": "Static Resume Landing Page v1",
-  "status": "approved",
+  "status": "ready-for-review",
   "source": {
     "repository": "LafaYeti-dev/keanan-wilson-resume",
+    "baseCommit": "a1008572389640e933039c904a9fcf1392b2cfe8",
     "commit": null
   },
   "scope": {
@@ -27,24 +28,76 @@
       "Verification evidence is recorded in the pull request and repository state files"
     ]
   },
+  "implementation": {
+    "status": "implemented-on-feature-branch",
+    "branch": "feature/resume-landing-page-v1",
+    "preview": "http://127.0.0.1:4173/",
+    "files": [
+      "index.html",
+      "styles.css",
+      "script.js",
+      "scripts/verify-content.mjs",
+      "assets/resume/keanan-wilson-resume.pdf"
+    ],
+    "assetStrategy": "No approved project imagery was supplied; v1 uses the approved premium text-led direction."
+  },
   "verification": {
-    "status": "pending",
+    "status": "passed-on-feature-branch",
+    "verifiedAt": "2026-07-14T19:14:39+07:00",
     "commands": [
       {
         "command": "git diff --check",
-        "status": "pending",
-        "evidence": null
+        "status": "passed",
+        "evidence": "Exited 0 with no output after the final implementation changes."
       },
       {
         "command": "python3 -m http.server 4173",
-        "status": "pending",
-        "evidence": "Local browser preview"
+        "status": "passed",
+        "evidence": "Local preview served at http://127.0.0.1:4173/; index, styles.css, script.js, and PDF returned HTTP 200."
       },
       {
-        "command": "Playwright or equivalent browser QA at 1440px, 768px, and 375px",
-        "status": "pending",
-        "evidence": null
+        "command": "node scripts/verify-content.mjs",
+        "status": "passed",
+        "evidence": "111 authoritative source fragments and all 15 source links were found; required relative asset references and archived-project language were present."
+      },
+      {
+        "command": "npx --yes html-validate index.html",
+        "status": "passed",
+        "evidence": "HTML validation completed with 0 errors and 0 warnings after the final markup fixes."
+      },
+      {
+        "command": "node --check script.js && node --check scripts/verify-content.mjs",
+        "status": "passed",
+        "evidence": "Both JavaScript files passed syntax checks."
+      },
+      {
+        "command": "Playwright 1.61.1 Chromium assertion run at 1440x1000, 768x1024, and 375x812",
+        "status": "passed",
+        "evidence": "All three viewports reported 0 overflow elements, 0 text outside the viewport, one H1, 19 ordered headings, 0 console warnings/errors, 0 page errors, and 0 failed local requests."
+      },
+      {
+        "command": "npx playwright screenshot --browser chromium --viewport-size <width,height> --full-page http://127.0.0.1:4173/ <output.png>",
+        "status": "passed",
+        "evidence": "Full-page CLI screenshots completed at 1440x1000, 768x1024, and 375x812 and were visually reviewed for overlap, clipping, hierarchy, and responsive behavior."
+      },
+      {
+        "command": "GitHub Pages project-path simulation at /keanan-wilson-resume/ on temporary port 4174",
+        "status": "passed",
+        "evidence": "Page, stylesheet, script, and PDF returned HTTP 200 under the project prefix; resolved asset and download URLs retained the prefix; 375px document width remained 375px; console and request-failure logs were empty."
       }
+    ],
+    "manualChecks": [
+      "Keyboard Tab order begins with the visible skip link; skip activation transfers focus to Summary; all sampled focus outlines were solid and 3px.",
+      "Mobile menu opens, reports aria-expanded=true, closes on Escape, and returns focus to the Menu button.",
+      "Internal navigation lands below the sticky header; the PDF download event produced keanan-wilson-resume.pdf.",
+      "Sampled text contrast ranged from 5.88:1 to 14.73:1; reduced-motion media changed smooth scrolling to auto and reduced transitions to 0.01ms.",
+      "Print media rendered as an eight-page Letter PDF with white backgrounds, black text, hidden navigation/footer controls, and no clipped or orphaned final content.",
+      "The approved PDF is a four-page PDF 1.4 file with SHA-256 e86a5b4d27a6ecad78401426823acd168e21b54defb6b736fb9757cd0e7e46d6.",
+      "No images are included because no approved public imagery was supplied; image-alt verification is not applicable for v1."
+    ],
+    "limitations": [
+      "Automated external-link requests returned HTTP 200 for 5 authoritative destinations and HTTP 403 for 10 brand or Upwork destinations; no checked URL returned 404 or 410. The exact approved source links remain unchanged.",
+      "The feature branch is not merged and GitHub Pages is not yet launched, so the canonical production URL has not been verified against a live deployment."
     ]
   },
   "contextProjection": {
@@ -58,6 +111,9 @@
       "repository URL"
     ],
     "status": "pending-launch",
-    "evidence": []
+    "evidence": [
+      "CU1 is implemented and verified on feature/resume-landing-page-v1, but no merge or final public URL exists yet.",
+      "Cross-repository projection remains deferred until the reviewed pull request is merged and the GitHub Pages URL is confirmed."
+    ]
   }
 }
