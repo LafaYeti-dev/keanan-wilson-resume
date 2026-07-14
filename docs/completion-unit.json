@@ -37,13 +37,17 @@
       "styles.css",
       "script.js",
       "scripts/verify-content.mjs",
-      "assets/resume/keanan-wilson-resume.pdf"
+      "assets/resume/keanan-wilson-resume.pdf",
+      "assets/projects/README.md",
+      "assets/projects/skin-element/the-skin-element-logo.png",
+      "assets/projects/sound-united/polk-audio-logo.png",
+      "assets/projects/hk-strategies/angostura-aromatic-bitters-logo.png"
     ],
-    "assetStrategy": "No approved project imagery was supplied; v1 uses the approved premium text-led direction."
+    "assetStrategy": "The premium text-led direction now includes three standardized, brand-only project heroes using public-safe, resolution-appropriate local logo or wordmark assets. Provenance, dimensions, hashes, and The Skin Element usage constraint are recorded in assets/projects/README.md; no screenshots, product photography, stock imagery, or generated imagery are included."
   },
   "verification": {
     "status": "passed-on-feature-branch",
-    "verifiedAt": "2026-07-14T19:14:39+07:00",
+    "verifiedAt": "2026-07-14T20:12:32+07:00",
     "commands": [
       {
         "command": "git diff --check",
@@ -61,7 +65,7 @@
         "evidence": "111 authoritative source fragments and all 15 source links were found; required relative asset references and archived-project language were present."
       },
       {
-        "command": "npx --yes html-validate index.html",
+        "command": "npx --no-install html-validate index.html",
         "status": "passed",
         "evidence": "HTML validation completed with 0 errors and 0 warnings after the final markup fixes."
       },
@@ -71,19 +75,24 @@
         "evidence": "Both JavaScript files passed syntax checks."
       },
       {
-        "command": "Playwright 1.61.1 Chromium assertion run at 1440x1000, 768x1024, and 375x812",
+        "command": "In-app Playwright browser assertions at 1440x900, 768x1024, and 375x812",
         "status": "passed",
-        "evidence": "All three viewports reported 0 overflow elements, 0 text outside the viewport, one H1, 19 ordered headings, 0 console warnings/errors, 0 page errors, and 0 failed local requests."
+        "evidence": "All three standardized project heroes loaded and remained fully contained. Desktop and tablet used a 3.2:1 ratio; mobile used a 2.286:1 ratio. All viewports reported zero horizontal overflow; mobile headings remained contained; final browser logs contained zero warnings or errors."
       },
       {
-        "command": "npx playwright screenshot --browser chromium --viewport-size <width,height> --full-page http://127.0.0.1:4173/ <output.png>",
+        "command": "npx --no-install playwright screenshot --browser chromium --viewport-size <width,height> --wait-for-selector '#project-skin-element .project-logo' --wait-for-timeout 1800 http://127.0.0.1:4173/?qa=<viewport>#evidence <output.png>",
         "status": "passed",
-        "evidence": "Full-page CLI screenshots completed at 1440x1000, 768x1024, and 375x812 and were visually reviewed for overlap, clipping, hierarchy, and responsive behavior."
+        "evidence": "Playwright 1.61.1 CLI screenshots completed at 1440x900, 768x1024, and 375x812 after allowing the smooth anchor scroll to settle; all were visually reviewed with the project hero, archived-build notice, and project copy visible without overlap or clipping."
       },
       {
         "command": "GitHub Pages project-path simulation at /keanan-wilson-resume/ on temporary port 4174",
         "status": "passed",
-        "evidence": "Page, stylesheet, script, and PDF returned HTTP 200 under the project prefix; resolved asset and download URLs retained the prefix; 375px document width remained 375px; console and request-failure logs were empty."
+        "evidence": "Page, stylesheet, all three project logos, and PDF returned HTTP 200 under the project prefix; the relative asset paths remained project-path compatible."
+      },
+      {
+        "command": "curl verification of recorded project-logo source URLs",
+        "status": "passed",
+        "evidence": "The Skin Element, Polk Audio, and Angostura source URLs each returned HTTP 200 with the same byte size as the committed local copy; recorded SHA-256 hashes are 884c4b331bd9123c6ec0f33ff1feb2aafe9377c252b30e50e71f33a0f1f8433d, 9a2a6a172c919ee19545ce518c425056551c08de79cfe6f90836e44dc540ee49, and 47fd3565ecb3be9e70fdf9170c899485f3fdbab6cc170431a4121c6a0c69ca51."
       }
     ],
     "manualChecks": [
@@ -91,12 +100,14 @@
       "Mobile menu opens, reports aria-expanded=true, closes on Escape, and returns focus to the Menu button.",
       "Internal navigation lands below the sticky header; the PDF download event produced keanan-wilson-resume.pdf.",
       "Sampled text contrast ranged from 5.88:1 to 14.73:1; reduced-motion media changed smooth scrolling to auto and reduced transitions to 0.01ms.",
-      "Print media rendered as an eight-page Letter PDF with white backgrounds, black text, hidden navigation/footer controls, and no clipped or orphaned final content.",
+      "Print media rendered as an eight-page tagged Letter PDF with black text, hidden navigation/footer controls, and the decorative project heroes omitted while every project heading and evidence paragraph remained present.",
       "The approved PDF is a four-page PDF 1.4 file with SHA-256 e86a5b4d27a6ecad78401426823acd168e21b54defb6b736fb9757cd0e7e46d6.",
-      "No images are included because no approved public imagery was supplied; image-alt verification is not applicable for v1."
+      "The three project hero images use empty alt attributes inside aria-hidden containers because the official brand names are already exposed by adjacent H3 headings; the final DOM contains one H1, an ordered H1-H3 hierarchy, and no duplicate IDs.",
+      "The Skin Element remains labeled as an unreleased archived Shopify rebuild directly beneath the brand-only hero, and its notice still states that the work does not represent the current public site."
     ],
     "limitations": [
       "Automated external-link requests returned HTTP 200 for 5 authoritative destinations and HTTP 403 for 10 brand or Upwork destinations; no checked URL returned 404 or 410. The exact approved source links remain unchanged.",
+      "The Polk wordmark is a high-resolution local asset whose original download metadata points to a third-party logo archive rather than an official media kit; the local and recorded online copies match by SHA-256. Replace it if Polk supplies an approved official press asset.",
       "The feature branch is not merged and GitHub Pages is not yet launched, so the canonical production URL has not been verified against a live deployment."
     ]
   },
