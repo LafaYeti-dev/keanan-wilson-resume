@@ -39,4 +39,4 @@ Implement the complete first version of the GitHub Pages resume landing page usi
 
 Do not change approved resume content, introduce a framework or build system, add tracking or external services, generate imagery, or publish private client material.
 
-The exact Codex task is stored in `docs/CODEX_BUILD_PROMPT.md`.
+Use the concise Codex prompt provided with the current project handoff.
