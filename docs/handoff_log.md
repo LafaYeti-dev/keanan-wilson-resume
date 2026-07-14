@@ -152,3 +152,43 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - No implementation blocker remains.
 - The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
 - The feature branch is not merged and GitHub Pages is not launched, so production verification and Context Projection remain pending.
+
+## 2026-07-14 - CU1 desktop scale QA ready for review
+
+### Completed
+
+- Rebalanced the desktop layout after review feedback that the page read too small, without changing authoritative resume content or the established mobile composition.
+- Added a 1440px presentation tier with a 1280px content shell, 18px body copy, 100px hero name, 48px section headings, and 29px company and project headings.
+- Added a moderate 1024px tier with 17px body copy and 44px section headings while keeping tablet and mobile copy at 16px.
+- Stacked the Toolkit and Skills headings above their desktop grids so the enlarged headings remain intact and do not force internal word breaks.
+- Versioned the relative stylesheet URL to `styles.css?v=20260714-3` so a running local or GitHub Pages preview cannot silently retain the earlier small-scale CSS.
+
+### Verification
+
+- In-app Playwright passed at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720 with zero horizontal overflow or out-of-bounds elements and no console warnings or errors.
+- At 1440px, computed typography measured 18px body copy, 100px hero type, 48px section headings, and 29px company headings; at 1024px, body copy measured 17px and section headings 44px.
+- Playwright 1.61.1 CLI screenshots of the desktop hero, experience, and toolkit at 1440x1000 plus tablet Featured Projects and the mobile toolkit were visually reviewed without clipping, overlap, or copy collision.
+- The toolkit heading remains one line at 1440px and 1024px. At 375px and 320px it wraps only between `PROJECT‑MANAGEMENT` and `TOOLKIT`, with no internal word breaks or horizontal overflow.
+- The mobile menu opens, reports `aria-expanded=true`, closes on Escape, restores focus to its control, and produces no browser console output.
+- All local project images loaded at their recorded intrinsic dimensions; no PDF links or download controls are present; external new-tab links retain `noopener noreferrer`.
+- `node scripts/verify-content.mjs` still passes for 114 authoritative fragments and 16 links; HTML validation, JavaScript syntax checks, JSON validation, and `git diff --check` pass.
+- The `/keanan-wilson-resume/` project-path simulation returned HTTP 200 for the cache-versioned stylesheet, script, project assets, and retained PDF.
+- All eight rendered Letter print pages were visually inspected; headings and evidence remain present with no clipping or collisions.
+
+### Decisions
+
+- Increase scale only at desktop breakpoints; preserve the approved tablet and mobile rhythm and content order.
+- Keep the enlarged Toolkit and Skills headings as full-width section labels above their grids for stable whole-word rendering.
+- Keep CU1 `ready-for-review`; this QA revision does not close, merge, launch, or project the completion unit.
+
+### Pending
+
+- Keanan reviews the enlarged desktop experience in the open pull request; do not merge it as part of this handoff.
+- After review and merge, verify the live GitHub Pages URL and reconcile the state files on `main`.
+- Complete or explicitly defer Context Projection after the final public URL and merged status are known.
+
+### Blockers and limitations
+
+- No implementation blocker remains.
+- The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
+- The feature branch is not merged and GitHub Pages is not launched, so production verification and Context Projection remain pending.

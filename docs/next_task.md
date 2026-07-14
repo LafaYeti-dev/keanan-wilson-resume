@@ -6,13 +6,14 @@ CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resu
 
 ### Objective
 
-Review the pull request against `main`, compare the complete page with `source/resume-content.md`, inspect the Pi8 Featured Project and standardized project heroes, confirm the mobile heading behavior and absence of PDF download controls, and either approve it or request focused changes.
+Review the pull request against `main`, compare the complete page with `source/resume-content.md`, inspect the enlarged desktop typography and spacing at 1440px and 1024px, review the Pi8 Featured Project and standardized project heroes, confirm the mobile heading behavior and absence of PDF download controls, and either approve it or request focused changes.
 
 ### Review evidence
 
 - Full implementation: `index.html`, `styles.css`, and `script.js`
 - Content integrity: `node scripts/verify-content.mjs` passes for 114 source fragments and 16 approved links
-- Browser QA: Playwright passed at 1440px, 768px, and 375px with no overflow or console errors; the long toolkit heading also preserves whole words at 320px
+- Desktop scale: 1440px now uses 18px body copy, a 100px hero name, 48px section headings, and 29px company headings; 1024px uses a moderate 17px/44px tier
+- Browser QA: Playwright passed at 1440px, 1024px, 768px, 375px, and 320px with no overflow, out-of-bounds elements, or console errors; the long toolkit heading preserves whole words at the narrow widths
 - Project heroes: the official high-resolution Pi8 visual and two brand marks load without problematic clipping at all approved widths; provenance, dimensions, hashes, and usage constraints are recorded in `assets/projects/README.md`
 - PDF: `assets/resume/keanan-wilson-resume.pdf` remains a verified repository asset, but the interface contains no PDF links or download controls
 - GitHub Pages: relative paths passed a local `/keanan-wilson-resume/` project-prefix simulation
