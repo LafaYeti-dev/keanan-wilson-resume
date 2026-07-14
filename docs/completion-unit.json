@@ -1,12 +1,12 @@
 {
-  "version": 7,
+  "version": 8,
   "id": "CU1",
   "title": "Static Resume Landing Page v1",
   "status": "launched-awaiting-context-projection",
   "source": {
     "repository": "LafaYeti-dev/keanan-wilson-resume",
     "baseCommit": "a1008572389640e933039c904a9fcf1392b2cfe8",
-    "commit": "bcbe5c676db47abb64b954dff9a2552dba0302a7"
+    "commit": "4b2863ef84d7b37e447fd89215ee19b884cfdb2b"
   },
   "scope": {
     "summary": "Build the first premium, responsive resume and project portfolio landing page from the approved resume content and public-safe assets, ready for GitHub Pages.",
@@ -29,8 +29,8 @@
     ]
   },
   "implementation": {
-    "status": "deployed-with-verified-type-scale-update-ready",
-    "branch": "codex/reduce-type-scale",
+    "status": "deployed-and-production-verified",
+    "branch": "main",
     "preview": "http://127.0.0.1:4173/",
     "publicUrl": "https://lafayeti-dev.github.io/keanan-wilson-resume/",
     "files": [
@@ -48,7 +48,7 @@
   },
   "verification": {
     "status": "passed-on-production",
-    "verifiedAt": "2026-07-14T22:52:47+07:00",
+    "verifiedAt": "2026-07-14T22:58:02+07:00",
     "commands": [
       {
         "command": "git diff --check",
@@ -93,7 +93,7 @@
       {
         "command": "GitHub Pages production build and live Playwright verification",
         "status": "passed",
-        "evidence": "PR #1 merged to main as bcbe5c676db47abb64b954dff9a2552dba0302a7. GitHub Pages build 1095169114 completed with status built and no error. The public page, styles.css?v=20260714-4, script, three project visuals, and retained PDF returned HTTPS 200. Live Playwright passed at 1440, 1024, 768, 375, and 320px with the expected typography, project-first order, zero overflow, zero broken assets, zero failed requests, and zero console warnings or errors."
+        "evidence": "PR #2 merged the exact proportional type scale to main as 4b2863ef84d7b37e447fd89215ee19b884cfdb2b. GitHub Pages build 1095220710 completed with status built and no error. Live Playwright at 1440, 1024, 768, 375, and 320px reproduced the requested 75% global and 50% hero sizes exactly with zero overflow, broken assets, failed requests, console warnings, or console errors."
       },
       {
         "command": "curl verification of recorded project-asset source URLs",
@@ -117,7 +117,7 @@
     "limitations": [
       "Automated external-link requests returned HTTP 200 for the new Pi8 destination and previously returned HTTP 200 for 5 other authoritative destinations and HTTP 403 for 10 brand or Upwork destinations; no checked URL returned 404 or 410. The exact approved source links remain present.",
       "The Polk wordmark is a high-resolution local asset whose original download metadata points to a third-party logo archive rather than an official media kit; the local and recorded online copies match by SHA-256. Replace it if Polk supplies an approved official press asset.",
-      "The verified type-scale revision is not yet deployed at the time of this evidence record; the public site continues serving the prior production build until this branch is merged and Pages rebuilds.",
+      "The proportional type-scale revision is deployed and verified on the public GitHub Pages URL.",
       "Context Projection remains required and has not yet been completed or explicitly deferred with approval, so CU1 is launched but not claimed closed."
     ]
   },

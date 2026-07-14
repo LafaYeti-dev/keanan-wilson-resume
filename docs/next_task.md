@@ -1,12 +1,12 @@
 # Approved Next Task
 
-## Deploy Type-Scale Revision
+## Resolve Context Projection
 
-CU1 - Static Resume Landing Page v1 is live. Keanan's requested 25% global text reduction and 50% hero-name reduction are verified on `codex/reduce-type-scale` and ready to deploy. Context Projection remains required after deployment.
+CU1 - Static Resume Landing Page v1 is live with Keanan's requested 25% global text reduction and 50% hero-name reduction. The revision is merged and production-verified. Context Projection is the only remaining completion item.
 
 ### Objective
 
-Merge and deploy the verified type-scale revision, confirm the exact computed sizes and clean behavior on the public URL, then return to Context Projection as the only remaining CU1 governance item.
+Project the final repository, public URL, project status, and portfolio registry changes into the required external context, or obtain explicit approval to defer that projection. Only then reconcile CU1 as closed.
 
 ### Review evidence
 
@@ -19,14 +19,14 @@ Merge and deploy the verified type-scale revision, confirm the exact computed si
 - Project heroes: the official high-resolution Pi8 visual and two brand marks load without problematic clipping at all approved widths; provenance, dimensions, hashes, and usage constraints are recorded in `assets/projects/README.md`
 - PDF: `assets/resume/keanan-wilson-resume.pdf` remains a verified repository asset, but the interface contains no PDF links or download controls
 - GitHub Pages: relative paths passed a local `/keanan-wilson-resume/` project-prefix simulation
-- Production: PR #1 merged to `main` as `bcbe5c676db47abb64b954dff9a2552dba0302a7`; GitHub Pages build `1095169114` completed successfully
+- Production: PR #2 merged to `main` as `4b2863ef84d7b37e447fd89215ee19b884cfdb2b`; GitHub Pages build `1095220710` completed successfully
 - Public URL: `https://lafayeti-dev.github.io/keanan-wilson-resume/`
 - Live QA: page and critical assets returned HTTPS 200; Playwright passed at 1440px, 1024px, 768px, 375px, and 320px with no overflow, broken assets, failed requests, or console errors
 - Context Projection: required and `launch-verified-projection-pending`
 
 ### Exact next action
 
-Merge `codex/reduce-type-scale`, wait for GitHub Pages to rebuild, and repeat the five-viewport production assertions. Then restore Context Projection as the exact next governance action.
+Complete Context Projection for the confirmed public site and repository, or explicitly approve deferral. Then update the four state files to close CU1 if all completion rules are satisfied.
 
 ### Do not do
 

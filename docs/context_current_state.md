@@ -2,13 +2,13 @@
 
 ## Status
 
-CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. Keanan's exact 25% global text reduction and 50% hero-name reduction are implemented and verified on `codex/reduce-type-scale`, pending deployment. CU1 is not claimed closed because required Context Projection remains pending.
+CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. Keanan's exact 25% global text reduction and 50% hero-name reduction are merged, deployed, and production-verified. CU1 is not claimed closed because required Context Projection remains pending.
 
 ## Verified repository state
 
 - Repository: `LafaYeti-dev/keanan-wilson-resume`
-- Base branch and launch commit: `main` at `bcbe5c676db47abb64b954dff9a2552dba0302a7`
-- Working branch: `codex/reduce-type-scale`
+- Base branch and current production commit: `main` at `4b2863ef84d7b37e447fd89215ee19b884cfdb2b`
+- Working branch: `main`
 - Intended hosting: GitHub Pages project URL
 - Stack: semantic HTML, modern CSS, and minimal vanilla JavaScript
 - Build system and runtime dependencies: none
@@ -53,13 +53,14 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 - Browser geometry checks: the Pi8 visual loaded at its 1500 x 1125 intrinsic size. The toolkit title stays on one line at 1440px and 1024px, and preserves whole words with zero overflow at 375px and the 320px minimum.
 - Keyboard: skip link receives first focus and transfers focus to Summary; sampled focus outlines are solid and 3px; mobile menu opens, closes on Escape, and returns focus to its control.
 - Link checks: all internal targets resolve; all external links use `noopener noreferrer`; the Pi8 product link resolves to the official page; no PDF link or download control is exposed.
-- GitHub Pages project-path simulation: `/keanan-wilson-resume/` page, `styles.css?v=20260714-4`, script, Pi8 image, both project logos, and retained PDF asset returned HTTP 200 with the prefix retained.
+- GitHub Pages project-path simulation: `/keanan-wilson-resume/` page, `styles.css?v=20260714-5`, script, Pi8 image, both project logos, and retained PDF asset returned HTTP 200 with the prefix retained.
 - Accessibility and contrast: semantic landmarks and H1-H3 hierarchy passed; sampled contrast ratios remain 5.88:1 to 14.73:1; the meaningful Pi8 image has concise alt text while decorative logos retain empty alt attributes beside named headings.
 - Reduced motion: `prefers-reduced-motion: reduce` changed smooth scrolling to `auto` and transitions to 0.01ms.
 - Print: all six rendered pages of the revised Letter PDF 1.4 output were visually inspected with Featured Projects before Professional Experience, black text, hidden navigation/footer controls, and no clipping or broken glyphs.
 - Asset provenance: the official Pi8 page and image returned HTTP 200; the WebP-negotiated image response exactly matched the committed file at SHA-256 `a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db`. The unchanged Polk and Angostura marks retain their recorded verification.
-- Production: PR #1 merged as `bcbe5c676db47abb64b954dff9a2552dba0302a7`; GitHub Pages build `1095169114` completed with status `built` and no error.
-- Live HTTPS checks: page, `styles.css?v=20260714-4`, script, Pi8 visual, Polk and Angostura marks, and retained PDF returned HTTP 200 from GitHub Pages.
+- Production: PR #2 merged the proportional type scale as `4b2863ef84d7b37e447fd89215ee19b884cfdb2b`; GitHub Pages build `1095220710` completed with status `built` and no error.
+- Live HTTPS checks: page, `styles.css?v=20260714-5`, script, Pi8 visual, Polk and Angostura marks, and retained PDF returned HTTP 200 from GitHub Pages.
+- Live type-scale checks: all five approved viewports reproduced the requested 75% global and 50% hero multipliers exactly.
 - Live Playwright: all five approved viewports reproduced the verified computed typography and project-first section order with zero overflow, broken images, failed requests, console warnings, or console errors.
 - Live visual review: a 1440x1000 production capture matched the final local hero, navigation, page gutters, and typography.
 

@@ -269,6 +269,29 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - No implementation blocker remains.
 - The public URL still serves the prior scale until this revision is merged and Pages rebuilds.
 
+## 2026-07-14 - CU1 proportional type scale deployed
+
+### Completed
+
+- Merged PR #2 to `main` as `4b2863ef84d7b37e447fd89215ee19b884cfdb2b`.
+- GitHub Pages build `1095220710` completed with status `built` and no error.
+- Deployed the exact 75% global text scale and 50% hero-name scale to the public URL.
+
+### Production verification
+
+- Live Playwright passed at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720.
+- Every live computed size matched the verified local ratios exactly.
+- All live viewports reported zero overflow, out-of-bounds elements, broken images, failed requests, console warnings, and console errors.
+- Mobile menu and reduced-motion checks remained passed.
+
+### Pending
+
+- Context Projection remains the only unresolved CU1 completion item.
+
+### Blockers and limitations
+
+- No implementation or production blocker remains.
+
 ## 2026-07-14 - CU1 desktop scale QA ready for review
 
 ### Completed
