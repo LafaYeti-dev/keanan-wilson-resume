@@ -6,15 +6,15 @@ CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resu
 
 ### Objective
 
-Review the pull request against `main`, compare the complete page with `source/resume-content.md`, inspect the standardized project heroes and archived Skin Element labeling, and either approve it or request focused changes.
+Review the pull request against `main`, compare the complete page with `source/resume-content.md`, inspect the Pi8 Featured Project and standardized project heroes, confirm the mobile heading behavior and absence of PDF download controls, and either approve it or request focused changes.
 
 ### Review evidence
 
 - Full implementation: `index.html`, `styles.css`, and `script.js`
-- Content integrity: `node scripts/verify-content.mjs` passes for 111 source fragments and 15 approved links
-- Browser QA: Playwright passed at 1440px, 768px, and 375px with no overflow, console errors, page errors, or failed local requests
-- Project heroes: three brand-only local assets load without clipping at all approved widths; provenance, dimensions, hashes, and usage constraints are recorded in `assets/projects/README.md`
-- PDF: `assets/resume/keanan-wilson-resume.pdf` returns HTTP 200 and downloads as `keanan-wilson-resume.pdf`
+- Content integrity: `node scripts/verify-content.mjs` passes for 114 source fragments and 16 approved links
+- Browser QA: Playwright passed at 1440px, 768px, and 375px with no overflow or console errors; the long toolkit heading also preserves whole words at 320px
+- Project heroes: the official high-resolution Pi8 visual and two brand marks load without problematic clipping at all approved widths; provenance, dimensions, hashes, and usage constraints are recorded in `assets/projects/README.md`
+- PDF: `assets/resume/keanan-wilson-resume.pdf` remains a verified repository asset, but the interface contains no PDF links or download controls
 - GitHub Pages: relative paths passed a local `/keanan-wilson-resume/` project-prefix simulation
 - Context Projection: required and `pending-launch`
 
@@ -26,4 +26,4 @@ After approval and merge, verify the live GitHub Pages project URL, reconcile `d
 
 ### Do not do
 
-Do not select another roadmap item, change approved resume content, add unapproved imagery or services beyond the recorded brand-only marks, claim CU1 is closed before merge and production verification, or project a public URL before it is confirmed.
+Do not select another roadmap item, change approved resume content, add unapproved imagery or services beyond the recorded Pi8 product visual and brand marks, reintroduce a PDF download control without approval, claim CU1 is closed before merge and production verification, or project a public URL before it is confirmed.

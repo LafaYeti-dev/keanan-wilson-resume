@@ -19,21 +19,21 @@ CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resu
 - Premium text-led hero and professional positioning
 - Approved summary, project-management toolkit, and core skills
 - Complete professional experience with every approved company, title, date, bullet, metric, and link
-- Featured project evidence for The Skin Element, Polk Audio, and Angostura Bitters
-- Standardized project heroes using brand logos or wordmarks only, with consistent aspect ratios and project-specific neutral fields
-- Explicit unreleased archived Shopify rebuild labeling for The Skin Element, including a statement that the work does not represent the current public site
-- Education, Upwork contact path, and two downloadable resume PDF actions
+- Featured Projects for the Bowers & Wilkins Pi8 Earbuds product launch, Polk Audio, and Angostura Bitters
+- Standardized project heroes using an official Pi8 product visual plus brand marks for Polk Audio and Angostura
+- The Skin Element remains in Professional Experience and is explicitly identified there as a completed, unreleased Shopify rebuild; it is not presented as a current-site project
+- Education and an Upwork contact path with no visible PDF download option
 - Responsive navigation, skip link, focus states, reduced-motion handling, metadata, and print styles
 - Lean source-integrity verification in `scripts/verify-content.mjs`
 
 ## Authoritative content and assets
 
-- `source/resume-content.md` remains unchanged and authoritative.
-- `node scripts/verify-content.mjs` found all 111 authoritative content fragments and all 15 approved source links in `index.html`.
+- `source/resume-content.md` remains authoritative and now includes only Keanan's specifically approved Pi8 Featured Project update.
+- `node scripts/verify-content.mjs` found all 114 authoritative content fragments and all 16 approved source links in `index.html`.
 - `assets/resume/keanan-wilson-resume.pdf` is present as a four-page PDF 1.4 document.
 - PDF SHA-256: `e86a5b4d27a6ecad78401426823acd168e21b54defb6b736fb9757cd0e7e46d6`
-- Approved project visuals are limited to three brand-only marks; no screenshots, product photography, stock imagery, placeholders, or generated imagery are present.
-- The Skin Element logo matches the archived unreleased Shopify theme reference; the page continues to state that the work does not represent the current public site.
+- Approved project visuals are limited to one official Pi8 product image and two brand marks; no screenshots, stock imagery, placeholders, or generated imagery are present.
+- The Skin Element project hero and logo asset were removed. Its original Professional Experience wording remains unchanged and does not link to or imply ownership of the current public site.
 - Asset dimensions, source URLs, SHA-256 hashes, and usage constraints are recorded in `assets/projects/README.md`.
 
 ## Verification evidence
@@ -42,20 +42,20 @@ CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resu
 - `npx --no-install html-validate index.html`: passed with 0 errors and 0 warnings.
 - `node --check script.js` and `node --check scripts/verify-content.mjs`: passed.
 - Local server on port 4173: index, stylesheet, script, and PDF returned HTTP 200.
-- Playwright 1.61.1 Chromium at 1440x1000, 768x1024, and 375x812: 0 overflow elements, 0 text outside the viewport, one H1, 19 ordered headings, 0 console warnings/errors, 0 page errors, and 0 failed local requests at every viewport.
-- Playwright 1.61.1 CLI screenshots at 1440x900, 768x1024, and 375x812: the settled Evidence view was visually reviewed with no overlap, logo clipping, or project-copy collision.
-- Browser geometry checks: all three project marks loaded and were fully contained; hero ratios were 3.2:1 on desktop/tablet and 2.286:1 on mobile; every viewport reported zero horizontal overflow.
+- Playwright 1.61.1 Chromium at 1440x900, 768x1024, and 375x812: the Pi8 image loaded at 1500 x 1125, headings remained contained, and every viewport reported zero horizontal overflow, console warnings, or console errors.
+- Playwright 1.61.1 CLI screenshots at 1440x900, 768x1024, and 375x812: the settled Featured Projects view was visually reviewed with no image clipping, overlap, or project-copy collision.
+- Browser geometry checks: the Pi8 hero measured 1192 x 372.5 at desktop, 672 x 210 at tablet, and 315 x 137.8 at mobile. The toolkit title preserved whole words with zero overflow at 375px and the 320px minimum.
 - Keyboard: skip link receives first focus and transfers focus to Summary; sampled focus outlines are solid and 3px; mobile menu opens, closes on Escape, and returns focus to its control.
-- Link and download checks: all internal targets resolve; all external links use `noopener noreferrer`; PDF download event returned `keanan-wilson-resume.pdf`.
-- GitHub Pages project-path simulation: `/keanan-wilson-resume/` page, CSS, all three project logos, and PDF returned HTTP 200 with the prefix retained and no mobile overflow.
-- Accessibility and contrast: semantic landmarks and H1-H3 hierarchy passed; sampled contrast ratios ranged from 5.88:1 to 14.73:1; the decorative logos have empty alt attributes inside `aria-hidden` containers while adjacent H3 headings expose the official brand names.
+- Link checks: all internal targets resolve; all external links use `noopener noreferrer`; the Pi8 product link resolves to the official page; no PDF link or download control is exposed.
+- GitHub Pages project-path simulation: `/keanan-wilson-resume/` page, CSS, script, Pi8 image, both project logos, and retained PDF asset returned HTTP 200 with the prefix retained.
+- Accessibility and contrast: semantic landmarks and H1-H3 hierarchy passed; sampled contrast ratios remain 5.88:1 to 14.73:1; the meaningful Pi8 image has concise alt text while decorative logos retain empty alt attributes beside named headings.
 - Reduced motion: `prefers-reduced-motion: reduce` changed smooth scrolling to `auto` and transitions to 0.01ms.
-- Print: an eight-page tagged Letter PDF rendered with black text, hidden navigation/footer controls, and decorative project heroes omitted while project headings and evidence copy remained present.
-- Asset provenance: all three recorded source URLs returned HTTP 200 and matched the committed byte sizes; local and online copies were hash-verified where available.
+- Print: an eight-page Letter PDF 1.4 file rendered with black text, hidden navigation/footer controls, and project heroes omitted while project headings and evidence copy remained present.
+- Asset provenance: the official Pi8 page and image returned HTTP 200; the WebP-negotiated image response exactly matched the committed file at SHA-256 `a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db`. The unchanged Polk and Angostura marks retain their recorded verification.
 
 ## Known limitations
 
-- Automated checks received HTTP 200 from 5 authoritative external destinations and HTTP 403 from 10 brand or Upwork destinations. No checked URL returned 404 or 410; the exact approved links were preserved.
+- The new Pi8 destination returned HTTP 200. Prior automated checks received HTTP 200 from 5 other authoritative destinations and HTTP 403 from 10 brand or Upwork destinations. No checked URL returned 404 or 410; all approved links remain present.
 - The Polk wordmark is a high-resolution local asset traced to a third-party logo archive rather than an official media kit; its local and recorded online copies match by SHA-256 and can be replaced if an official press asset becomes available.
 - GitHub Pages has not been launched from this feature branch. The project-path behavior is verified locally, but the canonical URL still requires post-merge production verification.
 - CU1 remains open until the PR is reviewed and merged, the public URL is confirmed, state files are reconciled on `main`, and Context Projection is completed or explicitly deferred with approval.

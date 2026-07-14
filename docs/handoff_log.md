@@ -112,3 +112,43 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - No implementation blocker remains.
 - The Polk wordmark is traced to a high-resolution third-party logo archive rather than an official media kit; its local and recorded online copies match by SHA-256 and can be replaced if an official press asset is supplied.
 - The feature branch is not merged and GitHub Pages is not launched, so production verification and Context Projection remain pending.
+
+## 2026-07-14 - CU1 Pi8 featured-project revision ready for review
+
+### Completed
+
+- Replaced The Skin Element Featured Project module with `Bowers & Wilkins - Pi8 Earbuds Product Launch` using Keanan's approved claim: `Managed the design and user flow for the Bowers & Wilkins Pi8 Earbuds product launch, from brand review through product launch.`
+- Added the approved claim and official Pi8 product-page link to `source/resume-content.md`, preserving that file as the authoritative content record.
+- Sourced a 1500 x 1125 Pi8 product visual directly from the official Bowers & Wilkins product page, stored it locally as WebP, and recorded source, dimensions, hash, content negotiation, and usage constraints.
+- Renamed the section from `Featured Project Evidence` to `Featured Projects`.
+- Removed the obsolete Skin Element hero asset and archived-only Featured Project styles. The unchanged Professional Experience bullet still identifies The Skin Element as a completed, unreleased Shopify ecommerce rebuild.
+- Removed both visible PDF download actions at Keanan's request while retaining the approved PDF as an unlinked repository asset.
+- Prevented mobile headings from breaking inside words. `PROJECT‑MANAGEMENT` now remains whole and wraps only before `TOOLKIT` at narrow widths.
+
+### Verification
+
+- `node scripts/verify-content.mjs` passes for all 114 authoritative fragments and 16 approved links; HTML validation, JavaScript syntax checks, JSON validation, and `git diff --check` pass.
+- The official Pi8 page and image returned HTTP 200. With `Accept: image/webp`, the official response matched the committed 121,684-byte file and SHA-256 `a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db`.
+- In-app Playwright and Playwright 1.61.1 CLI passed at 1440x900, 768x1024, and 375x812 with zero horizontal overflow and no image, heading, or project-copy collision.
+- The toolkit title preserves whole words at 375px and 320px with zero overflow; the final DOM contains zero PDF links, download attributes, or visible download controls.
+- The Pi8 image loads at its 1500 x 1125 intrinsic size with concise alt text; the official external link uses `_blank` plus `noopener noreferrer`; final browser logs contain zero warnings or errors.
+- GitHub Pages project-path simulation returned HTTP 200 for the page, CSS, script, Pi8 visual, Polk and Angostura marks, and retained PDF asset.
+- Print remains an eight-page Letter PDF 1.4 output with project headings and evidence copy retained while project visuals are omitted.
+
+### Decisions
+
+- Treat Keanan's Pi8 instruction and removal of PDF controls as explicit approved content and interface overrides for CU1.
+- Use the official product visual as product identity, not as evidence that Keanan owns the current public Pi8 page.
+- Keep CU1 `ready-for-review`; these revisions do not close, merge, launch, or project the completion unit.
+
+### Pending
+
+- Keanan reviews the updated open pull request against `main`; do not merge it as part of this handoff.
+- After review and merge, verify the live GitHub Pages URL and reconcile the state files on `main`.
+- Complete or explicitly defer Context Projection after the final public URL and merged status are known.
+
+### Blockers and limitations
+
+- No implementation blocker remains.
+- The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
+- The feature branch is not merged and GitHub Pages is not launched, so production verification and Context Projection remain pending.

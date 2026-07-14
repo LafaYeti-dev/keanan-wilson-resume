@@ -23,16 +23,17 @@ For The Skin Element, use screenshots from the archived unreleased Shopify build
 
 ## CU1 project hero assets
 
-These brand-only marks are approved for the standardized Featured Project Evidence heroes. They are decorative duplicates of adjacent text headings, so the page uses empty `alt` attributes. No product photography, campaign imagery, or current-site screenshots are included.
+These approved local assets standardize the Featured Projects heroes. The Pi8 visual is meaningful product imagery with concise alternative text; the Polk Audio and Angostura marks are decorative duplicates of adjacent text headings and use empty `alt` attributes. No current-site screenshots, placeholders, stock imagery, or generated imagery are included.
 
-### The Skin Element
+### Bowers & Wilkins Pi8 Earbuds
 
-- File: `skin-element/the-skin-element-logo.png`
-- Dimensions: 480 x 355 PNG
-- SHA-256: `884c4b331bd9123c6ec0f33ff1feb2aafe9377c252b30e50e71f33a0f1f8433d`
-- Local evidence: the archived unreleased Shopify theme at `Desktop/Web Project Management/ADA/Master Exports/TSE Theme Export 9:2:25/config/settings_data.json` references `shopify://shop_images/cropped-website_logo_the-skin-element-480x355.webp` as its logo.
-- Retrieved: 2026-07-14 from the brand Shopify CDN URL matching that archived filename: `https://theskinelementshop.com.au/cdn/shop/files/cropped-website_logo_the-skin-element-480x355.webp?v=1755796536`
-- Usage constraint: this is only the brand mark associated with the archived build. It is not current-site project evidence; the page must continue to identify the work as an unreleased archived Shopify rebuild.
+- File: `sound-united/bowers-wilkins-pi8-earbuds.webp`
+- Dimensions: 1500 x 1125 WebP
+- SHA-256: `a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db`
+- Official product page: `https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi8/300965.html`
+- Official image source: `https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw190cf0de/bowers/Rich-Content/BW_2-Column_Pi8_795104-min.png`
+- Retrieved: 2026-07-14; the server delivers the official product visual as WebP despite the source URL suffix.
+- Usage constraint: this image represents the Bowers & Wilkins Pi8 product only; it is not a screenshot or evidence that Keanan owns the current public product page.
 
 ### Polk Audio
 

@@ -173,3 +173,11 @@ Agile / Scrum · Kanban · Scope, Budget & Timeline Management · UX/UI Wirefram
 **Bachelor of Arts, Music (2017)**
 
 Men’s Varsity Soccer · Men’s Ultimate Frisbee · Orchestra · The Improvisation Group of Lawrence University (IGLU) · Lawrence University Cello Studio · Beta Theta Pi
+
+# Approved Featured Project Update - 2026-07-14
+
+**Bowers & Wilkins - Pi8 Earbuds Product Launch**
+
+Managed the design and user flow for the Bowers & Wilkins Pi8 Earbuds product launch, from brand review through product launch.
+
+[Pi8 Earbuds Product Page](https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi8/300965.html)

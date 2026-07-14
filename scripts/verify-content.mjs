@@ -54,9 +54,9 @@ const pageHrefs = new Set(
 const missingUrls = sourceUrls.filter((url) => !pageHrefs.has(url));
 
 const requiredFragments = [
-  'Unreleased archived Shopify rebuild',
-  'does not represent The Skin Element’s current public site',
-  'href="./assets/resume/keanan-wilson-resume.pdf"',
+  'Featured Projects',
+  'Bowers &amp; Wilkins - Pi8 Earbuds Product Launch',
+  'src="./assets/projects/sound-united/bowers-wilkins-pi8-earbuds.webp"',
   'href="./styles.css"',
   'src="./script.js"',
 ];
