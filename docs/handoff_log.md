@@ -196,6 +196,41 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - GitHub Pages is currently disabled and must be enabled after merge.
 - The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
 
+## 2026-07-14 - CU1 launched and production-verified
+
+### Completed
+
+- Merged reviewed PR #1 to `main` as `bcbe5c676db47abb64b954dff9a2552dba0302a7` after Keanan explicitly requested launch.
+- Enabled GitHub Pages from the repository root on `main` with HTTPS enforced.
+- GitHub Pages build `1095169114` completed with status `built`, no error, and the confirmed public URL `https://lafayeti-dev.github.io/keanan-wilson-resume/`.
+- Updated `README.md` and the four repository state files on `main` with the confirmed launch evidence.
+
+### Verification
+
+- The live page, `styles.css?v=20260714-4`, script, Pi8 visual, Polk logo, Angostura logo, and retained PDF each returned HTTPS 200 from GitHub Pages.
+- Live Playwright 1.61.1 Chromium passed at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720.
+- Production computed styles matched the approved local design at every viewport, including 20px/33px desktop body copy, 58px section headings, 34px company/project headings, and 22px project evidence at 1440px.
+- The production DOM retained Featured Projects before Professional Experience, one H1, no duplicate IDs, no PDF controls, no external-link rel issues, and no broken images.
+- Every live viewport reported zero horizontal overflow, out-of-bounds elements, failed requests, console warnings, and console errors.
+- Tablet, mobile, and minimum-width menu interactions and reduced-motion behavior passed on the public site.
+- A 1440x1000 production screenshot was visually reviewed and matched the final local hero, navigation, typography, and page gutters.
+
+### Decisions
+
+- Treat the confirmed GitHub Pages URL as the canonical public project URL recorded by this repository.
+- Keep CU1 `launched-awaiting-context-projection`; merge and production verification satisfy the launch requirement but not the separate Context Projection completion rule.
+
+### Pending
+
+- Complete the required cross-repository Context Projection for the project registry, public site URL, project status, and repository URL, or explicitly approve deferral.
+- After projection is completed or deferred with approval, reconcile the four state files and close CU1 if every completion rule is satisfied.
+
+### Blockers and limitations
+
+- No implementation or production blocker remains.
+- Context Projection is the only remaining CU1 governance item.
+- The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
+
 ## 2026-07-14 - CU1 desktop scale QA ready for review
 
 ### Completed

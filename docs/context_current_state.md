@@ -2,17 +2,18 @@
 
 ## Status
 
-CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resume-landing-page-v1`. Keanan explicitly authorized launch after the final design revision. It is ready to merge and deploy but is not yet closed or merged.
+CU1 - Static Resume Landing Page v1 is merged to `main`, deployed, and production-verified at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. It is not claimed closed because required Context Projection remains pending.
 
 ## Verified repository state
 
 - Repository: `LafaYeti-dev/keanan-wilson-resume`
-- Base branch and commit: `main` at `a1008572389640e933039c904a9fcf1392b2cfe8`
-- Working branch: `feature/resume-landing-page-v1`
+- Base branch and launch commit: `main` at `bcbe5c676db47abb64b954dff9a2552dba0302a7`
+- Working branch: `main`
 - Intended hosting: GitHub Pages project URL
 - Stack: semantic HTML, modern CSS, and minimal vanilla JavaScript
 - Build system and runtime dependencies: none
 - Local preview: `http://127.0.0.1:4173/`
+- Public URL: `https://lafayeti-dev.github.io/keanan-wilson-resume/`
 
 ## Implemented experience
 
@@ -56,14 +57,18 @@ CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resu
 - Reduced motion: `prefers-reduced-motion: reduce` changed smooth scrolling to `auto` and transitions to 0.01ms.
 - Print: all eight rendered pages of the Letter PDF 1.4 output were visually inspected with Featured Projects before Professional Experience, black text, hidden navigation/footer controls, and project heroes omitted while project headings and evidence copy remained present.
 - Asset provenance: the official Pi8 page and image returned HTTP 200; the WebP-negotiated image response exactly matched the committed file at SHA-256 `a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db`. The unchanged Polk and Angostura marks retain their recorded verification.
+- Production: PR #1 merged as `bcbe5c676db47abb64b954dff9a2552dba0302a7`; GitHub Pages build `1095169114` completed with status `built` and no error.
+- Live HTTPS checks: page, `styles.css?v=20260714-4`, script, Pi8 visual, Polk and Angostura marks, and retained PDF returned HTTP 200 from GitHub Pages.
+- Live Playwright: all five approved viewports reproduced the verified computed typography and project-first section order with zero overflow, broken images, failed requests, console warnings, or console errors.
+- Live visual review: a 1440x1000 production capture matched the final local hero, navigation, page gutters, and typography.
 
 ## Known limitations
 
 - The new Pi8 destination returned HTTP 200. Prior automated checks received HTTP 200 from 5 other authoritative destinations and HTTP 403 from 10 brand or Upwork destinations. No checked URL returned 404 or 410; all approved links remain present.
 - The Polk wordmark is a high-resolution local asset traced to a third-party logo archive rather than an official media kit; its local and recorded online copies match by SHA-256 and can be replaced if an official press asset becomes available.
-- GitHub Pages has not been launched from this feature branch. The project-path behavior is verified locally, but the canonical URL still requires post-merge production verification.
-- CU1 remains open until the PR is reviewed and merged, the public URL is confirmed, state files are reconciled on `main`, and Context Projection is completed or explicitly deferred with approval.
+- Headless Chromium's print PDF is untagged; the semantic HTML remains the accessible source experience.
+- CU1 remains open only until Context Projection is completed or explicitly deferred with approval.
 
 ## Context Projection
 
-Required and still `pending-launch`. The implementation now establishes the repository and intended public experience, but no cross-repository projection is approved until the reviewed PR is merged and the final GitHub Pages URL is known.
+Required and now `launch-verified-projection-pending`. The reviewed PR is merged and the public URL is known, but no cross-repository projection has been completed or explicitly deferred with approval.

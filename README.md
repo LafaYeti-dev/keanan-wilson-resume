@@ -4,7 +4,11 @@ Public, GitHub Pages-hosted resume and project portfolio for Keanan Wilson.
 
 ## Current status
 
-CU1 - Static Resume Landing Page v1 is implemented on `feature/resume-landing-page-v1` and ready for pull-request review. It is not closed or merged.
+CU1 - Static Resume Landing Page v1 is merged to `main` and live on GitHub Pages. Production verification passed; the Completion Unit remains open only for Context Projection completion or an explicitly approved deferral.
+
+## Public site
+
+https://lafayeti-dev.github.io/keanan-wilson-resume/
 
 ## Authoritative sources
 

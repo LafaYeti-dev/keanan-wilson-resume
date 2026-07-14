@@ -1,12 +1,12 @@
 {
-  "version": 5,
+  "version": 6,
   "id": "CU1",
   "title": "Static Resume Landing Page v1",
-  "status": "launch-authorized",
+  "status": "launched-awaiting-context-projection",
   "source": {
     "repository": "LafaYeti-dev/keanan-wilson-resume",
     "baseCommit": "a1008572389640e933039c904a9fcf1392b2cfe8",
-    "commit": null
+    "commit": "bcbe5c676db47abb64b954dff9a2552dba0302a7"
   },
   "scope": {
     "summary": "Build the first premium, responsive resume and project portfolio landing page from the approved resume content and public-safe assets, ready for GitHub Pages.",
@@ -29,9 +29,10 @@
     ]
   },
   "implementation": {
-    "status": "implemented-verified-and-launch-authorized",
-    "branch": "feature/resume-landing-page-v1",
+    "status": "deployed-and-production-verified",
+    "branch": "main",
     "preview": "http://127.0.0.1:4173/",
+    "publicUrl": "https://lafayeti-dev.github.io/keanan-wilson-resume/",
     "files": [
       "index.html",
       "styles.css",
@@ -46,8 +47,8 @@
     "assetStrategy": "The premium text-led direction uses one official, high-resolution Pi8 product visual and two resolution-appropriate local brand marks across standardized project heroes. Provenance, dimensions, hashes, and usage constraints are recorded in assets/projects/README.md; no screenshots, placeholders, stock imagery, or generated imagery are included."
   },
   "verification": {
-    "status": "passed-on-feature-branch",
-    "verifiedAt": "2026-07-14T22:04:48+07:00",
+    "status": "passed-on-production",
+    "verifiedAt": "2026-07-14T22:24:25+07:00",
     "commands": [
       {
         "command": "git diff --check",
@@ -90,6 +91,11 @@
         "evidence": "Page, cache-versioned stylesheet, script, Pi8 visual, both project logos, and retained PDF asset returned HTTP 200 under the project prefix; server logs confirmed each exact request and the relative asset paths remained project-path compatible."
       },
       {
+        "command": "GitHub Pages production build and live Playwright verification",
+        "status": "passed",
+        "evidence": "PR #1 merged to main as bcbe5c676db47abb64b954dff9a2552dba0302a7. GitHub Pages build 1095169114 completed with status built and no error. The public page, styles.css?v=20260714-4, script, three project visuals, and retained PDF returned HTTPS 200. Live Playwright passed at 1440, 1024, 768, 375, and 320px with the expected typography, project-first order, zero overflow, zero broken assets, zero failed requests, and zero console warnings or errors."
+      },
+      {
         "command": "curl verification of recorded project-asset source URLs",
         "status": "passed",
         "evidence": "The official Bowers & Wilkins Pi8 product page and image URL returned HTTP 200. With an explicit image/webp Accept header, the official image response matched the committed 121,684-byte local asset and SHA-256 a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db; the previously verified Polk Audio and Angostura marks remain unchanged."
@@ -98,6 +104,7 @@
     "manualChecks": [
       "Desktop readability was re-art-directed without altering authoritative content: the 1440px shell now uses 32px page gutters, primary body copy is 20px with a 33px line height, project evidence is 22px, section headings are 58px, experience and project headings are 34px, and the hero name is 112px.",
       "Featured Projects precedes Professional Experience in the DOM, primary navigation, hero index, section numbering, visual order, and print order.",
+      "The live GitHub Pages hero was captured at 1440x1000 and visually matched the verified local design with the final system typography and project-first navigation.",
       "Keyboard Tab order begins with the visible skip link; skip activation transfers focus to Summary; all sampled focus outlines were solid and 3px.",
       "Mobile menu opens, reports aria-expanded=true, closes on Escape, and returns focus to the Menu button.",
       "Internal navigation lands below the sticky header; the final DOM contains no PDF links, download attributes, or visible download controls.",
@@ -110,7 +117,7 @@
     "limitations": [
       "Automated external-link requests returned HTTP 200 for the new Pi8 destination and previously returned HTTP 200 for 5 other authoritative destinations and HTTP 403 for 10 brand or Upwork destinations; no checked URL returned 404 or 410. The exact approved source links remain present.",
       "The Polk wordmark is a high-resolution local asset whose original download metadata points to a third-party logo archive rather than an official media kit; the local and recorded online copies match by SHA-256. Replace it if Polk supplies an approved official press asset.",
-      "The feature branch is not merged and GitHub Pages is not yet launched, so the canonical production URL has not been verified against a live deployment."
+      "Context Projection remains required and has not yet been completed or explicitly deferred with approval, so CU1 is launched but not claimed closed."
     ]
   },
   "contextProjection": {
@@ -123,10 +130,10 @@
       "project status",
       "repository URL"
     ],
-    "status": "pending-launch",
+    "status": "launch-verified-projection-pending",
     "evidence": [
-      "CU1 is implemented and verified on feature/resume-landing-page-v1, but no merge or final public URL exists yet.",
-      "Cross-repository projection remains deferred until the reviewed pull request is merged and the GitHub Pages URL is confirmed."
+      "PR #1 is merged to main at bcbe5c676db47abb64b954dff9a2552dba0302a7 and the public site is verified at https://lafayeti-dev.github.io/keanan-wilson-resume/.",
+      "Cross-repository projection has not yet been completed or explicitly deferred with approval; CU1 remains open for that final governance step."
     ]
   }
 }
