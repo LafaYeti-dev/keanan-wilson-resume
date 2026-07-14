@@ -231,6 +231,44 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - Context Projection is the only remaining CU1 governance item.
 - The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
 
+## 2026-07-14 - CU1 proportional type-scale revision ready
+
+### Completed
+
+- Reduced every CSS `font-size` declaration to exactly 75% of its prior value at every screen and print breakpoint.
+- Reduced every `.hero h1` font-size declaration to exactly 50% of its prior value, including desktop, tablet, mobile, and print rules.
+- Kept layout spacing, page gutters, content order, assets, links, colors, focus states, and motion behavior unchanged.
+- Cache-versioned the stylesheet as `styles.css?v=20260714-5`.
+
+### Verification
+
+- Playwright 1.61.1 Chromium passed at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720 with zero overflow, out-of-bounds elements, broken images, failed requests, console warnings, or console errors.
+- At 1440px, computed body/project/section/company/hero sizes are 15px, 16.5px, 43.5px, 25.5px, and 56px respectively, exactly matching the requested ratios.
+- At 1024px, computed body/project/section/company/hero sizes are 13.5px, 15px, 37.5px, 22.5px, and 48px respectively.
+- Desktop and mobile screenshots were visually reviewed with intact hierarchy, stable controls, and no overlap.
+- Mobile menu open, Escape-close, and focus restoration behavior passed at 768px, 375px, and 320px.
+- The toolkit heading remains contained and unbroken internally at every viewport.
+- `node scripts/verify-content.mjs`, HTML validation, JavaScript syntax checks, reduced-motion emulation, and `git diff --check` pass.
+- GitHub Pages project-prefix simulation returned HTTP 200 for the page, `styles.css?v=20260714-5`, and script.
+- The revised print output is a six-page Letter PDF 1.4; all six rendered pages were visually inspected with no clipping, overlap, or broken glyphs.
+
+### Decisions
+
+- Interpret `Keanan Wilson` at the top as the large hero H1; the smaller sticky-header brand follows the global 25% reduction.
+- Preserve spacing exactly because Keanan requested text-size changes, not a layout-density change.
+- Keep CU1 open; this visual revision does not resolve Context Projection.
+
+### Pending
+
+- Merge and deploy the verified proportional type-scale revision.
+- Re-run five-viewport assertions against the public URL after GitHub Pages rebuilds.
+- Return Context Projection to the exact next action after production verification.
+
+### Blockers and limitations
+
+- No implementation blocker remains.
+- The public URL still serves the prior scale until this revision is merged and Pages rebuilds.
+
 ## 2026-07-14 - CU1 desktop scale QA ready for review
 
 ### Completed

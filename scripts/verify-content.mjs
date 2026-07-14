@@ -57,7 +57,7 @@ const requiredFragments = [
   'Featured Projects',
   'Bowers &amp; Wilkins - Pi8 Earbuds Product Launch',
   'src="./assets/projects/sound-united/bowers-wilkins-pi8-earbuds.webp"',
-  'href="./styles.css?v=20260714-4"',
+  'href="./styles.css?v=20260714-5"',
   'src="./script.js"',
 ];
 const missingFragments = requiredFragments.filter((fragment) => !page.includes(fragment));

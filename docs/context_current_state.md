@@ -2,13 +2,13 @@
 
 ## Status
 
-CU1 - Static Resume Landing Page v1 is merged to `main`, deployed, and production-verified at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. It is not claimed closed because required Context Projection remains pending.
+CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. Keanan's exact 25% global text reduction and 50% hero-name reduction are implemented and verified on `codex/reduce-type-scale`, pending deployment. CU1 is not claimed closed because required Context Projection remains pending.
 
 ## Verified repository state
 
 - Repository: `LafaYeti-dev/keanan-wilson-resume`
 - Base branch and launch commit: `main` at `bcbe5c676db47abb64b954dff9a2552dba0302a7`
-- Working branch: `main`
+- Working branch: `codex/reduce-type-scale`
 - Intended hosting: GitHub Pages project URL
 - Stack: semantic HTML, modern CSS, and minimal vanilla JavaScript
 - Build system and runtime dependencies: none
@@ -18,8 +18,9 @@ CU1 - Static Resume Landing Page v1 is merged to `main`, deployed, and productio
 ## Implemented experience
 
 - Premium text-led hero and professional positioning
-- Near-full-width desktop reading scale with 32px page gutters, 20px body copy, 112px hero name, 58px section headings, 34px company/project headings, and 22px project evidence at 1440px
-- Moderate 1024px scale with 18px body copy and 50px section headings; tablet and mobile now use a roomier 17px body and 18px project-evidence scale
+- Exact proportional text revision: every non-hero font size is 75% of its prior value and every hero-name size is 50% of its prior value
+- Revised 1440px scale: 15px body copy, 56px hero name, 43.5px section headings, 25.5px company/project headings, and 16.5px project evidence
+- Revised 1024px scale: 13.5px body copy, 48px hero name, 37.5px section headings, 22.5px company/project headings, and 15px project evidence
 - System sans-serif body typography for a more open, legible reading texture without external font requests
 - Approved summary, project-management toolkit, and core skills
 - Complete professional experience with every approved company, title, date, bullet, metric, and link
@@ -47,7 +48,7 @@ CU1 - Static Resume Landing Page v1 is merged to `main`, deployed, and productio
 - `node --check script.js` and `node --check scripts/verify-content.mjs`: passed.
 - Local server on port 4173: index, stylesheet, script, and PDF returned HTTP 200.
 - Playwright 1.61.1 Chromium at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720: every viewport reported zero horizontal overflow, out-of-bounds elements, broken images, failed requests, console warnings, and console errors.
-- Typography checks: 1440px measured 20px/33px body copy, 112px hero type, 58px section headings, 34px company/project headings, and 22px project evidence; 1024px measured 18px body copy, 50px section headings, 30px company/project headings, and 20px project evidence; narrower widths use 17px body copy and 18px project evidence.
+- Typography checks: the 1440px, 1024px, 768px, 375px, and 320px computed sizes match the requested 75% global and 50% hero ratios exactly.
 - Playwright 1.61.1 CLI screenshots: desktop hero, Featured Projects, and Professional Experience views at 1440x1000 plus Featured Projects at 768x1024 and 375x812 were visually reviewed with no clipping, overlap, or copy collision.
 - Browser geometry checks: the Pi8 visual loaded at its 1500 x 1125 intrinsic size. The toolkit title stays on one line at 1440px and 1024px, and preserves whole words with zero overflow at 375px and the 320px minimum.
 - Keyboard: skip link receives first focus and transfers focus to Summary; sampled focus outlines are solid and 3px; mobile menu opens, closes on Escape, and returns focus to its control.
@@ -55,7 +56,7 @@ CU1 - Static Resume Landing Page v1 is merged to `main`, deployed, and productio
 - GitHub Pages project-path simulation: `/keanan-wilson-resume/` page, `styles.css?v=20260714-4`, script, Pi8 image, both project logos, and retained PDF asset returned HTTP 200 with the prefix retained.
 - Accessibility and contrast: semantic landmarks and H1-H3 hierarchy passed; sampled contrast ratios remain 5.88:1 to 14.73:1; the meaningful Pi8 image has concise alt text while decorative logos retain empty alt attributes beside named headings.
 - Reduced motion: `prefers-reduced-motion: reduce` changed smooth scrolling to `auto` and transitions to 0.01ms.
-- Print: all eight rendered pages of the Letter PDF 1.4 output were visually inspected with Featured Projects before Professional Experience, black text, hidden navigation/footer controls, and project heroes omitted while project headings and evidence copy remained present.
+- Print: all six rendered pages of the revised Letter PDF 1.4 output were visually inspected with Featured Projects before Professional Experience, black text, hidden navigation/footer controls, and no clipping or broken glyphs.
 - Asset provenance: the official Pi8 page and image returned HTTP 200; the WebP-negotiated image response exactly matched the committed file at SHA-256 `a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db`. The unchanged Polk and Angostura marks retain their recorded verification.
 - Production: PR #1 merged as `bcbe5c676db47abb64b954dff9a2552dba0302a7`; GitHub Pages build `1095169114` completed with status `built` and no error.
 - Live HTTPS checks: page, `styles.css?v=20260714-4`, script, Pi8 visual, Polk and Angostura marks, and retained PDF returned HTTP 200 from GitHub Pages.
