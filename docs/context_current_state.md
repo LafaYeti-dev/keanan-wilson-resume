@@ -2,7 +2,7 @@
 
 ## Status
 
-CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resume-landing-page-v1`. It is ready for pull-request review and is not closed or merged.
+CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resume-landing-page-v1`. Keanan explicitly authorized launch after the final design revision. It is ready to merge and deploy but is not yet closed or merged.
 
 ## Verified repository state
 
@@ -17,11 +17,12 @@ CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resu
 ## Implemented experience
 
 - Premium text-led hero and professional positioning
-- Enlarged desktop reading scale with a 1280px content shell, 18px body copy, 100px hero name, 48px section headings, and 29px company and project headings at 1440px
-- Moderate 1024px desktop scale while preserving the established 768px, 375px, and 320px responsive behavior
+- Near-full-width desktop reading scale with 32px page gutters, 20px body copy, 112px hero name, 58px section headings, 34px company/project headings, and 22px project evidence at 1440px
+- Moderate 1024px scale with 18px body copy and 50px section headings; tablet and mobile now use a roomier 17px body and 18px project-evidence scale
+- System sans-serif body typography for a more open, legible reading texture without external font requests
 - Approved summary, project-management toolkit, and core skills
 - Complete professional experience with every approved company, title, date, bullet, metric, and link
-- Featured Projects for the Bowers & Wilkins Pi8 Earbuds product launch, Polk Audio, and Angostura Bitters
+- Featured Projects for the Bowers & Wilkins Pi8 Earbuds product launch, Polk Audio, and Angostura Bitters, positioned before Professional Experience in navigation, DOM, visual, and print order
 - Standardized project heroes using an official Pi8 product visual plus brand marks for Polk Audio and Angostura
 - The Skin Element remains in Professional Experience and is explicitly identified there as a completed, unreleased Shopify rebuild; it is not presented as a current-site project
 - Education and an Upwork contact path with no visible PDF download option
@@ -44,16 +45,16 @@ CU1 - Static Resume Landing Page v1 is implemented and verified on `feature/resu
 - `npx --no-install html-validate index.html`: passed with 0 errors and 0 warnings.
 - `node --check script.js` and `node --check scripts/verify-content.mjs`: passed.
 - Local server on port 4173: index, stylesheet, script, and PDF returned HTTP 200.
-- Playwright 1.61.1 Chromium at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720: every viewport reported zero horizontal overflow or out-of-bounds elements, and final console logs contained zero warnings or errors.
-- Desktop typography checks: 1440px measured 18px body copy, 100px hero type, 48px section headings, and 29px company headings; 1024px measured 17px body copy and 44px section headings. Tablet and mobile retain their established 16px body scale.
-- Playwright 1.61.1 CLI screenshots: desktop hero, experience, and toolkit views at 1440x1000 plus tablet Featured Projects at 768x1024 and mobile toolkit at 375x812 were visually reviewed with no clipping, overlap, or copy collision.
+- Playwright 1.61.1 Chromium at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720: every viewport reported zero horizontal overflow, out-of-bounds elements, broken images, failed requests, console warnings, and console errors.
+- Typography checks: 1440px measured 20px/33px body copy, 112px hero type, 58px section headings, 34px company/project headings, and 22px project evidence; 1024px measured 18px body copy, 50px section headings, 30px company/project headings, and 20px project evidence; narrower widths use 17px body copy and 18px project evidence.
+- Playwright 1.61.1 CLI screenshots: desktop hero, Featured Projects, and Professional Experience views at 1440x1000 plus Featured Projects at 768x1024 and 375x812 were visually reviewed with no clipping, overlap, or copy collision.
 - Browser geometry checks: the Pi8 visual loaded at its 1500 x 1125 intrinsic size. The toolkit title stays on one line at 1440px and 1024px, and preserves whole words with zero overflow at 375px and the 320px minimum.
 - Keyboard: skip link receives first focus and transfers focus to Summary; sampled focus outlines are solid and 3px; mobile menu opens, closes on Escape, and returns focus to its control.
 - Link checks: all internal targets resolve; all external links use `noopener noreferrer`; the Pi8 product link resolves to the official page; no PDF link or download control is exposed.
-- GitHub Pages project-path simulation: `/keanan-wilson-resume/` page, cache-versioned CSS, script, Pi8 image, both project logos, and retained PDF asset returned HTTP 200 with the prefix retained.
+- GitHub Pages project-path simulation: `/keanan-wilson-resume/` page, `styles.css?v=20260714-4`, script, Pi8 image, both project logos, and retained PDF asset returned HTTP 200 with the prefix retained.
 - Accessibility and contrast: semantic landmarks and H1-H3 hierarchy passed; sampled contrast ratios remain 5.88:1 to 14.73:1; the meaningful Pi8 image has concise alt text while decorative logos retain empty alt attributes beside named headings.
 - Reduced motion: `prefers-reduced-motion: reduce` changed smooth scrolling to `auto` and transitions to 0.01ms.
-- Print: all eight rendered pages of the Letter PDF 1.4 output were visually inspected with black text, hidden navigation/footer controls, and project heroes omitted while project headings and evidence copy remained present.
+- Print: all eight rendered pages of the Letter PDF 1.4 output were visually inspected with Featured Projects before Professional Experience, black text, hidden navigation/footer controls, and project heroes omitted while project headings and evidence copy remained present.
 - Asset provenance: the official Pi8 page and image returned HTTP 200; the WebP-negotiated image response exactly matched the committed file at SHA-256 `a0baf5730f8940b71c54c2bf7fcd7a65c25655016b447b2fbd3b19925177b1db`. The unchanged Polk and Angostura marks retain their recorded verification.
 
 ## Known limitations

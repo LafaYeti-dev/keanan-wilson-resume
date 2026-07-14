@@ -153,6 +153,49 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
 - The feature branch is not merged and GitHub Pages is not launched, so production verification and Context Projection remain pending.
 
+## 2026-07-14 - CU1 final design and launch authorization
+
+### Completed
+
+- Re-art-directed the site after Keanan's review that the typography still felt cramped and small.
+- Replaced Avenir Next as the first-choice body face with the native system sans-serif stack for a more open reading texture and zero external font requests.
+- Expanded the desktop shell to 32px page gutters at 1440px and increased the main reading scale to 20px body copy with a 33px line height, 22px project evidence, 34px company/project headings, 58px section headings, and 112px hero type.
+- Increased the 1024px tier to 18px body copy and 50px section headings; increased tablet and mobile body copy to 17px and project evidence to 18px.
+- Moved Featured Projects before Professional Experience in the DOM, primary navigation, hero index, section numbering, visual sequence, active-navigation behavior, and print sequence.
+- Changed the primary hero action to `View projects` and the navigation label from `Evidence` to `Projects`.
+- Cache-versioned the stylesheet as `styles.css?v=20260714-4`.
+
+### Verification
+
+- Playwright 1.61.1 Chromium passed at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720 with zero horizontal overflow, out-of-bounds elements, broken images, failed requests, console warnings, and console errors.
+- Computed 1440px typography measured 20px/33px body copy, 112px hero type, 58px section headings, 34px company/project headings, and 22px project evidence; 1024px measured 18px, 50px, 30px, and 20px respectively.
+- The DOM order is `top`, `summary`, `toolkit`, `skills`, `evidence`, `experience`, `education`, `contact`; one H1 and no duplicate IDs remain.
+- Tablet, mobile, and minimum-width menus open, report `aria-expanded=true`, close on Escape, and restore focus to the Menu button.
+- The toolkit heading remains one line at desktop widths and wraps only between whole words at 375px and 320px.
+- Reduced-motion emulation matches and changes smooth scrolling to `auto` and transitions to 0.01ms.
+- Playwright CLI captures of desktop hero, Featured Projects, and Professional Experience plus tablet and mobile Featured Projects were visually reviewed without overlap, clipping, or cramped copy.
+- `node scripts/verify-content.mjs` passes for 114 authoritative fragments and 16 links; HTML validation and both JavaScript syntax checks pass.
+- GitHub Pages project-path simulation returned HTTP 200 for the page, cache-versioned stylesheet, script, all three project visuals, and retained PDF.
+- Headless Chromium produced an eight-page Letter PDF 1.4; all eight rendered pages were visually inspected with Featured Projects before Professional Experience and no clipping or broken glyphs.
+
+### Decisions
+
+- Treat Keanan's instruction to launch as explicit authorization to merge the reviewed PR and enable GitHub Pages.
+- Preserve every authoritative resume claim while changing only hierarchy, interface labels, typography, spacing, and section order.
+- Keep CU1 open through deployment reconciliation; launch authorization does not by itself satisfy the Context Projection completion rule.
+
+### Pending
+
+- Commit and push this final design revision, update and merge the open pull request, and enable GitHub Pages from `main`.
+- Verify the live public URL and critical asset paths, then reconcile the state files on `main` with production evidence.
+- Complete Context Projection or explicitly defer it with approval before claiming CU1 closed.
+
+### Blockers and limitations
+
+- No implementation blocker remains.
+- GitHub Pages is currently disabled and must be enabled after merge.
+- The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
+
 ## 2026-07-14 - CU1 desktop scale QA ready for review
 
 ### Completed

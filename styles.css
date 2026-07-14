@@ -31,7 +31,7 @@ body {
   overflow-wrap: break-word;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
@@ -691,20 +691,20 @@ h3 {
 @media (min-width: 821px) {
   :root {
     --header-height: 76px;
-    --max-width: 1280px;
+    --max-width: 1600px;
   }
 
   body {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .brand {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .site-nav a {
     padding-block: 25px 23px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .site-nav a::after {
@@ -712,9 +712,9 @@ h3 {
   }
 
   .hero-inner {
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
-    gap: 72px;
-    padding-block: 112px 100px;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: 80px;
+    padding-block: 120px 108px;
   }
 
   .eyebrow,
@@ -724,11 +724,11 @@ h3 {
   }
 
   .hero h1 {
-    font-size: 88px;
+    font-size: 96px;
   }
 
   .hero-role {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .button {
@@ -739,7 +739,7 @@ h3 {
 
   .hero-index a {
     padding-block: 15px;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .hero-index span {
@@ -747,13 +747,13 @@ h3 {
   }
 
   .section {
-    padding-block: 112px;
+    padding-block: 120px;
   }
 
   .section-heading h2,
   .contact-section h2 {
     overflow-wrap: normal;
-    font-size: 44px;
+    font-size: 50px;
     hyphens: none;
     word-break: normal;
   }
@@ -765,126 +765,13 @@ h3 {
   }
 
   .summary-copy {
-    font-size: 33px;
+    max-width: 1060px;
+    font-size: 36px;
   }
 
   .term-list li {
-    min-height: 68px;
-    font-size: 17px;
-  }
-
-  .experience-item {
-    padding-block: 64px;
-  }
-
-  .experience-meta h3,
-  .evidence-header h3,
-  .education-detail h3 {
-    font-size: 27px;
-  }
-
-  .dates {
-    font-size: 15px;
-  }
-
-  .responsibility-list li + li {
-    margin-top: 17px;
-  }
-
-  .evidence-item {
-    padding-block: 56px;
-  }
-
-  .evidence-item > p {
-    font-size: 18px;
-  }
-
-  .text-link {
-    font-size: 15px;
-  }
-
-  .education-detail h3 {
-    font-size: 31px;
-  }
-
-  .degree {
+    min-height: 74px;
     font-size: 19px;
-  }
-
-  .contact-section {
-    padding-block: 104px;
-  }
-
-  .contact-section h2 {
-    font-size: 50px;
-  }
-
-  .contact-detail > p {
-    font-size: 32px;
-  }
-
-  .footer-inner {
-    min-height: 84px;
-  }
-
-  .footer-inner p,
-  .footer-inner a {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    font-size: 18px;
-  }
-
-  .brand {
-    font-size: 17px;
-  }
-
-  .site-nav a {
-    font-size: 16px;
-  }
-
-  .hero-inner {
-    gap: 96px;
-    padding-block: 116px 104px;
-  }
-
-  .eyebrow,
-  .section-number,
-  .evidence-context {
-    font-size: 15px;
-  }
-
-  .hero h1 {
-    font-size: 100px;
-  }
-
-  .hero-role {
-    font-size: 28px;
-  }
-
-  .button {
-    font-size: 17px;
-  }
-
-  .section {
-    padding-block: 120px;
-  }
-
-  .section-heading h2,
-  .contact-section h2 {
-    font-size: 48px;
-  }
-
-  .summary-copy {
-    font-size: 35px;
-  }
-
-  .term-list li {
-    min-height: 72px;
-    font-size: 18px;
   }
 
   .experience-item {
@@ -894,11 +781,7 @@ h3 {
   .experience-meta h3,
   .evidence-header h3,
   .education-detail h3 {
-    font-size: 29px;
-  }
-
-  .role {
-    font-size: 17px;
+    font-size: 30px;
   }
 
   .dates {
@@ -906,11 +789,11 @@ h3 {
   }
 
   .responsibility-list li + li {
-    margin-top: 18px;
+    margin-top: 20px;
   }
 
   .evidence-item {
-    padding: 64px 28px;
+    padding-block: 64px;
   }
 
   .evidence-item > p {
@@ -930,21 +813,147 @@ h3 {
   }
 
   .contact-section {
+    padding-block: 104px;
+  }
+
+  .contact-section h2 {
+    font-size: 58px;
+  }
+
+  .contact-detail > p {
+    font-size: 36px;
+  }
+
+  .footer-inner {
+    min-height: 84px;
+  }
+
+  .footer-inner p,
+  .footer-inner a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .site-nav a {
+    font-size: 17px;
+  }
+
+  .hero-inner {
+    gap: 104px;
+    padding-block: 128px 116px;
+  }
+
+  .eyebrow,
+  .section-number,
+  .evidence-context {
+    font-size: 15px;
+  }
+
+  .hero h1 {
+    font-size: 112px;
+  }
+
+  .hero-role {
+    font-size: 32px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
+
+  .section {
+    padding-block: 136px;
+  }
+
+  .section-heading h2,
+  .contact-section h2 {
+    font-size: 58px;
+  }
+
+  .summary-copy {
+    font-size: 42px;
+  }
+
+  .term-list li {
+    min-height: 80px;
+    font-size: 20px;
+  }
+
+  .experience-item {
+    grid-template-columns: minmax(330px, 0.85fr) minmax(0, 2.15fr);
+    gap: 72px;
+    padding-block: 88px;
+  }
+
+  .experience-meta h3,
+  .evidence-header h3,
+  .education-detail h3 {
+    font-size: 34px;
+  }
+
+  .role {
+    font-size: 19px;
+  }
+
+  .dates {
+    font-size: 17px;
+  }
+
+  .responsibility-list li + li {
+    margin-top: 22px;
+  }
+
+  .evidence-item {
+    grid-template-columns: minmax(330px, 0.85fr) minmax(0, 2.15fr);
+    gap: 40px 72px;
+    padding: 76px 28px;
+  }
+
+  .evidence-item > p {
+    font-size: 22px;
+  }
+
+  .text-link {
+    font-size: 18px;
+  }
+
+  .education-detail h3 {
+    font-size: 38px;
+  }
+
+  .degree {
+    font-size: 23px;
+  }
+
+  .contact-section {
     padding-block: 112px;
   }
 
   .contact-section h2 {
-    font-size: 56px;
+    font-size: 64px;
   }
 
   .contact-detail > p {
-    font-size: 35px;
+    font-size: 42px;
   }
 }
 
 @media (max-width: 820px) {
   :root {
     --header-height: 64px;
+  }
+
+  body {
+    font-size: 17px;
   }
 
   .header-inner {
@@ -977,6 +986,7 @@ h3 {
     align-items: center;
     padding: 8px 0;
     border-top: 1px solid var(--line);
+    font-size: 16px;
   }
 
   .site-nav a:nth-child(even) {
@@ -1026,7 +1036,7 @@ h3 {
   }
 
   .summary-copy {
-    font-size: 27px;
+    font-size: 29px;
   }
 
   .section-heading-wide {
@@ -1057,6 +1067,7 @@ h3 {
 
   .evidence-item > p {
     grid-column: 1;
+    font-size: 18px;
   }
 
   .contact-section {
