@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "id": "CU1",
+  "title": "Static Resume Landing Page v1",
+  "status": "approved",
+  "source": {
+    "repository": "LafaYeti-dev/keanan-wilson-resume",
+    "commit": null
+  },
+  "scope": {
+    "summary": "Build the first premium, responsive resume and project portfolio landing page from the approved resume content and public-safe assets, ready for GitHub Pages.",
+    "exclusions": [
+      "No unapproved resume-content changes",
+      "No framework, bundler, backend, database, analytics, tracking, paid service, custom domain, or image generation",
+      "No private or unsanitized client material",
+      "No claim that the current public Skin Element site is the archived Shopify rebuild",
+      "No unrelated work"
+    ],
+    "definitionOfDone": [
+      "Semantic index.html, styles.css, and minimal script.js implement the full site without a build system",
+      "Approved titles, dates, metrics, links, and claims remain accurate",
+      "Hero, summary, toolkit, skills, experience, projects, education, contact, and PDF download are present",
+      "The Skin Element project is labeled as an unreleased archived Shopify rebuild",
+      "Responsive behavior is verified at 1440px, 768px, and 375px with no horizontal overflow",
+      "Accessibility, link, asset, metadata, print, reduced-motion, and console checks pass",
+      "GitHub Pages project-path compatibility is verified",
+      "Verification evidence is recorded in the pull request and repository state files"
+    ]
+  },
+  "verification": {
+    "status": "pending",
+    "commands": [
+      {
+        "command": "git diff --check",
+        "status": "pending",
+        "evidence": null
+      },
+      {
+        "command": "python3 -m http.server 4173",
+        "status": "pending",
+        "evidence": "Local browser preview"
+      },
+      {
+        "command": "Playwright or equivalent browser QA at 1440px, 768px, and 375px",
+        "status": "pending",
+        "evidence": null
+      }
+    ]
+  },
+  "contextProjection": {
+    "version": 1,
+    "decision": "required",
+    "reason": "A new public resume and portfolio site changes Keanan's public professional presence and adds a maintained LafaYeti repository.",
+    "changedPortfolioFields": [
+      "project registry",
+      "public site URL",
+      "project status",
+      "repository URL"
+    ],
+    "status": "pending-launch",
+    "evidence": []
+  }
+}
