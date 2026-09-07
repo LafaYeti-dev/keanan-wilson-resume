@@ -11,7 +11,7 @@ Project the final repository, public URL, project status, and portfolio registry
 ### Review evidence
 
 - Full implementation: `index.html`, `styles.css`, and `script.js`
-- Content integrity: `node scripts/verify-content.mjs` passes for 114 source fragments and 16 approved links
+- Content integrity: `node scripts/verify-content.mjs` passes for 141 source fragments and 16 approved links; Good to Great Schools Australia is first in Professional Experience with seven approved bullets and no company-context block
 - Type scale: every non-hero font size is exactly 75% of its prior value; the hero full name is exactly 50% at every breakpoint
 - Desktop scale: 1440px now uses 15px body copy, a 56px hero name, 43.5px section headings, 25.5px company/project headings, and 16.5px project evidence
 - Browser QA: Playwright passed at 1440px, 1024px, 768px, 375px, and 320px with no overflow, out-of-bounds elements, broken assets, failed requests, or console errors; the long toolkit heading preserves whole words at narrow widths

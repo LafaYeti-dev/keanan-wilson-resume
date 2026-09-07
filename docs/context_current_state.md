@@ -2,12 +2,12 @@
 
 ## Status
 
-CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. Keanan's exact 25% global text reduction and 50% hero-name reduction are merged, deployed, and production-verified. CU1 is not claimed closed because required Context Projection remains pending.
+CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. The Lead Technical Project Manager content revision is deployed, with Good to Great Schools Australia first in Professional Experience and its company-context links removed at Keanan's request. CU1 is not claimed closed because required Context Projection remains pending.
 
 ## Verified repository state
 
 - Repository: `LafaYeti-dev/keanan-wilson-resume`
-- Base branch and current production commit: `main` at `4b2863ef84d7b37e447fd89215ee19b884cfdb2b`
+- Base branch and current content production commit: `main` at `e6023611759d5412239f5552771328dd17bad4b9`
 - Working branch: `main`
 - Intended hosting: GitHub Pages project URL
 - Stack: semantic HTML, modern CSS, and minimal vanilla JavaScript
@@ -22,7 +22,8 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 - Revised 1440px scale: 15px body copy, 56px hero name, 43.5px section headings, 25.5px company/project headings, and 16.5px project evidence
 - Revised 1024px scale: 13.5px body copy, 48px hero name, 37.5px section headings, 22.5px company/project headings, and 15px project evidence
 - System sans-serif body typography for a more open, legible reading texture without external font requests
-- Approved summary, project-management toolkit, and core skills
+- Approved Lead Technical Project Manager summary, 18-item Tools & Platforms list, and 20-item Core Expertise list
+- Good to Great Schools Australia appears first in Professional Experience with the approved title, dates, and seven achievement bullets; the subsequently removed company-context block and its three links are absent
 - Complete professional experience with every approved company, title, date, bullet, metric, and link
 - Featured Projects for the Bowers & Wilkins Pi8 Earbuds product launch, Polk Audio, and Angostura Bitters, positioned before Professional Experience in navigation, DOM, visual, and print order
 - Standardized project heroes using an official Pi8 product visual plus brand marks for Polk Audio and Angostura
@@ -33,8 +34,8 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 
 ## Authoritative content and assets
 
-- `source/resume-content.md` remains authoritative and now includes only Keanan's specifically approved Pi8 Featured Project update.
-- `node scripts/verify-content.mjs` found all 114 authoritative content fragments and all 16 approved source links in `index.html`.
+- `source/resume-content.md` remains authoritative and contains Keanan's approved Lead Technical Project Manager content revision and Pi8 Featured Project update.
+- `node scripts/verify-content.mjs` found all 141 authoritative content fragments and all 16 approved source links in `index.html` after the company-context removal.
 - `assets/resume/keanan-wilson-resume.pdf` is present as a four-page PDF 1.4 document.
 - PDF SHA-256: `e86a5b4d27a6ecad78401426823acd168e21b54defb6b736fb9757cd0e7e46d6`
 - Approved project visuals are limited to one official Pi8 product image and two brand marks; no screenshots, stock imagery, placeholders, or generated imagery are present.
@@ -44,6 +45,9 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 ## Verification evidence
 
 - `git diff --check`: passed with no output.
+- Content revision QA: Good to Great Schools Australia remains first with all seven bullets; the company-context block and its three links are absent from source and page markup.
+- Playwright 1.62.1 Chromium at 1440x1000, 768x1024, and 375x812: zero horizontal overflow, out-of-bounds elements, failed requests, console warnings, or console errors after the context removal.
+- GitHub Pages build for `e6023611759d5412239f5552771328dd17bad4b9` completed with status `built` and no error; an external Bangkok probe returned HTTP 200 with a matching deployment timestamp and no company-context text.
 - `npx --no-install html-validate index.html`: passed with 0 errors and 0 warnings.
 - `node --check script.js` and `node --check scripts/verify-content.mjs`: passed.
 - Local server on port 4173: index, stylesheet, script, and PDF returned HTTP 200.

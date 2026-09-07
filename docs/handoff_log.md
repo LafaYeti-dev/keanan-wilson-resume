@@ -113,6 +113,29 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - The Polk wordmark is traced to a high-resolution third-party logo archive rather than an official media kit; its local and recorded online copies match by SHA-256 and can be replaced if an official press asset is supplied.
 - The feature branch is not merged and GitHub Pages is not launched, so production verification and Context Projection remain pending.
 
+## 2026-09-07 - GGSA company context removed
+
+### Completed
+
+- Removed the Good to Great Schools Australia company-context line and its Sydney Morning Herald, Glassdoor, and SEEK links from the authoritative source and rendered page at Keanan's request.
+- Removed the now-unused company-context CSS while preserving the approved GGSA title, dates, and seven achievement bullets.
+- Committed and pushed the content revision to `main` as `e6023611759d5412239f5552771328dd17bad4b9`.
+
+### Verification
+
+- `node scripts/verify-content.mjs` passed for all 141 authoritative fragments and 16 approved source links.
+- JavaScript syntax, JSON validation, and `git diff --check` passed.
+- Playwright 1.62.1 Chromium passed at 1440x1000, 768x1024, and 375x812 with the context block absent, GGSA first with seven bullets, and zero overflow, out-of-bounds elements, failed requests, console warnings, or console errors.
+- GitHub Pages completed the `e602361` build with status `built` and no error. An external Bangkok probe returned HTTP 200 for the updated deployment and found no company-context text.
+
+### Pending
+
+- Context Projection remains the only unresolved CU1 completion item.
+
+### Blockers and limitations
+
+- The current Laos ISP route to GitHub Pages remains unavailable locally; production reachability was verified through GitHub's build status and an external Bangkok probe.
+
 ## 2026-07-14 - CU1 Pi8 featured-project revision ready for review
 
 ### Completed

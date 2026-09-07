@@ -1,12 +1,12 @@
 {
-  "version": 8,
+  "version": 9,
   "id": "CU1",
   "title": "Static Resume Landing Page v1",
   "status": "launched-awaiting-context-projection",
   "source": {
     "repository": "LafaYeti-dev/keanan-wilson-resume",
     "baseCommit": "a1008572389640e933039c904a9fcf1392b2cfe8",
-    "commit": "4b2863ef84d7b37e447fd89215ee19b884cfdb2b"
+    "commit": "e6023611759d5412239f5552771328dd17bad4b9"
   },
   "scope": {
     "summary": "Build the first premium, responsive resume and project portfolio landing page from the approved resume content and public-safe assets, ready for GitHub Pages.",
@@ -63,7 +63,7 @@
       {
         "command": "node scripts/verify-content.mjs",
         "status": "passed",
-        "evidence": "114 authoritative source fragments and all 16 source links were found after adding Keanan's approved Pi8 featured-project claim; required relative asset references were present."
+        "evidence": "141 authoritative source fragments and all 16 source links were found after the approved Lead Technical Project Manager revision and removal of the GGSA company-context block; required relative asset references were present."
       },
       {
         "command": "npx --no-install html-validate index.html",
