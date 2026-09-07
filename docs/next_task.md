@@ -17,6 +17,7 @@ Project the final repository, public URL, project status, and portfolio registry
 - Browser QA: Playwright passed at 1440px, 1024px, 768px, 375px, and 320px with no overflow, out-of-bounds elements, broken assets, failed requests, or console errors; the long toolkit heading preserves whole words at narrow widths
 - Content order: Featured Projects precedes Professional Experience in the DOM, navigation, hero index, section numbering, and print output
 - Project heroes: the official high-resolution Pi8 visual and two brand marks load without problematic clipping at all approved widths; provenance, dimensions, hashes, and usage constraints are recorded in `assets/projects/README.md`
+- Hero portrait: Keanan's approved, metadata-free 1600 x 1600 portrait renders with a 6px radius and responsive desktop, tablet, and mobile framing; provenance is recorded in `assets/profile/README.md`
 - PDF: `assets/resume/keanan-wilson-resume.pdf` remains a verified repository asset, but the interface contains no PDF links or download controls
 - GitHub Pages: relative paths passed a local `/keanan-wilson-resume/` project-prefix simulation
 - Production: PR #2 merged to `main` as `4b2863ef84d7b37e447fd89215ee19b884cfdb2b`; GitHub Pages build `1095220710` completed successfully

@@ -136,6 +136,32 @@ No technical blocker. Project screenshots and visual assets can be added during 
 
 - The current Laos ISP route to GitHub Pages remains unavailable locally; production reachability was verified through GitHub's build status and an external Bangkok probe.
 
+## 2026-09-07 - Hero portrait added
+
+### Completed
+
+- Added Keanan's approved portrait to the top hero in a dedicated right-side visual rail with a restrained 6px corner radius.
+- Added responsive behavior that pairs the portrait with the section index on tablet and stacks it below the primary introduction on mobile.
+- Created a 1600 x 1600 progressive JPEG at 329,495 bytes from the supplied 3361 x 3361 source and removed source camera metadata before public use.
+- Added Open Graph portrait metadata and recorded the asset's provenance, dimensions, hash, processing, and approved use in `assets/profile/README.md`.
+- Committed and pushed the implementation to `main` as `007f7f324e7d044377a4482b973deccac7041357`.
+
+### Verification
+
+- `node scripts/verify-content.mjs` passed for all 141 authoritative fragments and 16 approved source links, including the required portrait asset reference.
+- Playwright 1.62.1 Chromium passed at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720 with the portrait loaded at 1600 x 1600, meaningful alt text, a computed 6px radius, and zero overflow, out-of-bounds elements, failed requests, console warnings, or console errors.
+- Desktop, tablet, and mobile screenshots were visually reviewed for hierarchy, portrait scale, and face framing. Keyboard focus, mobile menu behavior, reduced motion, and print portrait suppression passed.
+- JavaScript syntax, JSON validation, local asset HTTP 200, metadata-string inspection, and `git diff --check` passed.
+- GitHub Pages built `007f7f324e7d044377a4482b973deccac7041357` with status `built` and no error. An external Bangkok probe returned HTTP 200 for the deployed page and portrait, confirmed the page references the portrait, and reported the expected JPEG content type and 329,495-byte size.
+
+### Pending
+
+- Context Projection remains the only unresolved CU1 completion item.
+
+### Blockers and limitations
+
+- The current Laos ISP route to GitHub Pages remains unavailable locally; production reachability requires an external probe.
+
 ## 2026-07-14 - CU1 Pi8 featured-project revision ready for review
 
 ### Completed

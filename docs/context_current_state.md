@@ -2,12 +2,12 @@
 
 ## Status
 
-CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. The Lead Technical Project Manager content revision is deployed, with Good to Great Schools Australia first in Professional Experience and its company-context links removed at Keanan's request. CU1 is not claimed closed because required Context Projection remains pending.
+CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. The Lead Technical Project Manager content revision is deployed, with Good to Great Schools Australia first in Professional Experience and its company-context links removed. Keanan's approved portrait is integrated into the responsive hero. CU1 is not claimed closed because required Context Projection remains pending.
 
 ## Verified repository state
 
 - Repository: `LafaYeti-dev/keanan-wilson-resume`
-- Base branch and current content production commit: `main` at `e6023611759d5412239f5552771328dd17bad4b9`
+- Base branch and current content production commit: `main` at `007f7f324e7d044377a4482b973deccac7041357`
 - Working branch: `main`
 - Intended hosting: GitHub Pages project URL
 - Stack: semantic HTML, modern CSS, and minimal vanilla JavaScript
@@ -18,6 +18,7 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 ## Implemented experience
 
 - Premium text-led hero and professional positioning
+- Responsive hero portrait with a restrained 6px radius, square desktop framing, and landscape mobile framing
 - Exact proportional text revision: every non-hero font size is 75% of its prior value and every hero-name size is 50% of its prior value
 - Revised 1440px scale: 15px body copy, 56px hero name, 43.5px section headings, 25.5px company/project headings, and 16.5px project evidence
 - Revised 1024px scale: 13.5px body copy, 48px hero name, 37.5px section headings, 22.5px company/project headings, and 15px project evidence
@@ -37,6 +38,7 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 - `source/resume-content.md` remains authoritative and contains Keanan's approved Lead Technical Project Manager content revision and Pi8 Featured Project update.
 - `node scripts/verify-content.mjs` found all 141 authoritative content fragments and all 16 approved source links in `index.html` after the company-context removal.
 - `assets/resume/keanan-wilson-resume.pdf` is present as a four-page PDF 1.4 document.
+- `assets/profile/keanan-wilson-portrait.jpg` is an approved, metadata-free 1600 x 1600 progressive JPEG optimized to 329,495 bytes; provenance and hash are recorded in `assets/profile/README.md`.
 - PDF SHA-256: `e86a5b4d27a6ecad78401426823acd168e21b54defb6b736fb9757cd0e7e46d6`
 - Approved project visuals are limited to one official Pi8 product image and two brand marks; no screenshots, stock imagery, placeholders, or generated imagery are present.
 - The Skin Element project hero and logo asset were removed. Its original Professional Experience wording remains unchanged and does not link to or imply ownership of the current public site.
@@ -45,6 +47,9 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 ## Verification evidence
 
 - `git diff --check`: passed with no output.
+- Portrait QA: Playwright 1.62.1 Chromium passed at 1440x1000, 1024x900, 768x1024, 375x812, and 320x720 with the 1600 x 1600 portrait loaded, 6px radius applied, meaningful alt text present, and zero overflow, broken assets, failed requests, console warnings, or console errors.
+- Portrait visual review: desktop, tablet, and mobile hero captures confirmed balanced sizing and natural face framing; print media intentionally hides the portrait while preserving the existing resume output.
+- Portrait production verification: GitHub Pages built `007f7f324e7d044377a4482b973deccac7041357` without error; an external Bangkok probe returned HTTP 200 for both the page and the 329,495-byte JPEG and confirmed the deployed page references the portrait.
 - Content revision QA: Good to Great Schools Australia remains first with all seven bullets; the company-context block and its three links are absent from source and page markup.
 - Playwright 1.62.1 Chromium at 1440x1000, 768x1024, and 375x812: zero horizontal overflow, out-of-bounds elements, failed requests, console warnings, or console errors after the context removal.
 - GitHub Pages build for `e6023611759d5412239f5552771328dd17bad4b9` completed with status `built` and no error; an external Bangkok probe returned HTTP 200 with a matching deployment timestamp and no company-context text.

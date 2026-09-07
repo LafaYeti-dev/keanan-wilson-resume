@@ -1,12 +1,12 @@
 {
-  "version": 9,
+  "version": 10,
   "id": "CU1",
   "title": "Static Resume Landing Page v1",
   "status": "launched-awaiting-context-projection",
   "source": {
     "repository": "LafaYeti-dev/keanan-wilson-resume",
     "baseCommit": "a1008572389640e933039c904a9fcf1392b2cfe8",
-    "commit": "e6023611759d5412239f5552771328dd17bad4b9"
+    "commit": "007f7f324e7d044377a4482b973deccac7041357"
   },
   "scope": {
     "summary": "Build the first premium, responsive resume and project portfolio landing page from the approved resume content and public-safe assets, ready for GitHub Pages.",
@@ -38,17 +38,19 @@
       "styles.css",
       "script.js",
       "scripts/verify-content.mjs",
+      "assets/profile/README.md",
+      "assets/profile/keanan-wilson-portrait.jpg",
       "assets/resume/keanan-wilson-resume.pdf",
       "assets/projects/README.md",
       "assets/projects/sound-united/bowers-wilkins-pi8-earbuds.webp",
       "assets/projects/sound-united/polk-audio-logo.png",
       "assets/projects/hk-strategies/angostura-aromatic-bitters-logo.png"
     ],
-    "assetStrategy": "The premium text-led direction uses one official, high-resolution Pi8 product visual and two resolution-appropriate local brand marks across standardized project heroes. Provenance, dimensions, hashes, and usage constraints are recorded in assets/projects/README.md; no screenshots, placeholders, stock imagery, or generated imagery are included."
+    "assetStrategy": "The premium text-led direction uses Keanan's approved portrait in the hero, one official high-resolution Pi8 product visual, and two resolution-appropriate local brand marks across standardized project heroes. The portrait is a metadata-free 1600 x 1600 progressive JPEG; project provenance, dimensions, hashes, and usage constraints are recorded in the asset README files. No screenshots, placeholders, stock imagery, or generated imagery are included."
   },
   "verification": {
     "status": "passed-on-production",
-    "verifiedAt": "2026-07-14T22:58:02+07:00",
+    "verifiedAt": "2026-09-07T16:38:09+07:00",
     "commands": [
       {
         "command": "git diff --check",
@@ -102,6 +104,7 @@
       }
     ],
     "manualChecks": [
+      "Keanan's approved hero portrait is deployed as a metadata-free 1600 x 1600 progressive JPEG with meaningful alt text, responsive framing, a 6px radius, and an Open Graph image reference; the production page and image returned HTTP 200 from an external Bangkok probe.",
       "Keanan's requested proportional reduction is exact: all text is 25% smaller and the hero full name is 50% smaller. At 1440px, body copy is 15px, project evidence is 16.5px, section headings are 43.5px, company/project headings are 25.5px, and the hero name is 56px.",
       "Featured Projects precedes Professional Experience in the DOM, primary navigation, hero index, section numbering, visual order, and print order.",
       "The live GitHub Pages hero was captured at 1440x1000 and visually matched the verified local design with the final system typography and project-first navigation.",
