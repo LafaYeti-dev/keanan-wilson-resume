@@ -453,17 +453,10 @@ h3 {
 }
 
 .responsibility-list a,
-.company-context a,
 .contact-detail a,
 .evidence-item a {
   color: var(--forest-light);
   font-weight: 650;
-}
-
-.company-context {
-  margin: 24px 0 0;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
 }
 
 .link-line,

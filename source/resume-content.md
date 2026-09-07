@@ -78,8 +78,6 @@ Jira · Confluence · Microsoft 365 · SharePoint · Microsoft Teams · OneDrive
 
 • Led developers, business analysts, QA, UX/UI, and contractors through the turnaround while **running technical recruitment interviews, onboarding and offboarding team members, resolving blockers, reviewing contractor performance, coordinating releases, and working directly with senior leadership on delivery priorities, resourcing, and risk.**
 
-**Company context:** [Sydney Morning Herald coverage](https://www.smh.com.au/education/fresh-turmoil-as-bullying-ceo-on-paid-leave-for-six-months-as-staff-flee-20220503-p5ai2v.html) · [Glassdoor employee reviews](https://www.glassdoor.com/Reviews/Good-to-Great-Schools-Australia-Reviews-E985457.htm) · [SEEK company reviews](https://au.seek.com/companies/good-to-great-schools-813477)
-
 **Revive Global Ventures – Remote**
 
 **Chief Technology Officer – Freelance**
