@@ -56,8 +56,9 @@ const missingUrls = sourceUrls.filter((url) => !pageHrefs.has(url));
 const requiredFragments = [
   'Featured Projects',
   'Bowers &amp; Wilkins - Pi8 Earbuds Product Launch',
+  'src="./assets/profile/keanan-wilson-portrait.jpg"',
   'src="./assets/projects/sound-united/bowers-wilkins-pi8-earbuds.webp"',
-  'href="./styles.css?v=20260906-1"',
+  'href="./styles.css?v=20260907-1"',
   'src="./script.js"',
 ];
 const missingFragments = requiredFragments.filter((fragment) => !page.includes(fragment));

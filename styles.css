@@ -200,6 +200,29 @@ h3 {
   border-left: 6px solid var(--rust);
 }
 
+.hero-aside {
+  display: grid;
+  gap: 28px;
+  align-self: center;
+}
+
+.hero-portrait {
+  aspect-ratio: 1;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(23, 33, 30, 0.2);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
 .eyebrow,
 .section-number,
 .evidence-context {
@@ -1008,6 +1031,12 @@ h3 {
     padding-block: 88px 72px;
   }
 
+  .hero-aside {
+    grid-template-columns: minmax(240px, 0.8fr) minmax(280px, 1.2fr);
+    gap: 36px;
+    align-items: end;
+  }
+
   .hero h1 {
     font-size: 32px;
   }
@@ -1098,6 +1127,19 @@ h3 {
   .hero-inner {
     gap: 52px;
     padding-block: 72px 60px;
+  }
+
+  .hero-aside {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero-portrait {
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-portrait img {
+    object-position: center 42%;
   }
 
   .hero-copy {
@@ -1249,6 +1291,7 @@ h3 {
   .site-header,
   .hero-index,
   .hero-actions,
+  .hero-portrait,
   .contact-actions,
   .project-hero,
   .site-footer,
