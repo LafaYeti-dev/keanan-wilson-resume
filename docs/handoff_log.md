@@ -380,3 +380,38 @@ No technical blocker. Project screenshots and visual assets can be added during 
 - No implementation blocker remains.
 - The Polk wordmark still traces to a high-resolution third-party logo archive rather than an official media kit; replace it if Polk supplies an approved official press asset.
 - The feature branch is not merged and GitHub Pages is not launched, so production verification and Context Projection remain pending.
+## 2026-09-08 - Dark logo V2 enhanced and ready for design review
+
+### Completed
+
+- Created `codex/resume-dark-logo-v2` and kept the live root resume unchanged.
+- Added a separate `v2/` working copy using charcoal, navy, and cool-blue accents.
+- Rebuilt the hero as an executive dossier: Keanan's identity, CTA, and self-contained landscape portrait form the left rail while the complete Professional Summary is visible in a structured navy field on the right.
+- Restored the numbered page anchors as a separate full-width navigation strip below the hero rather than combining them with the portrait.
+- Added consistent local marks for all 18 Tools & Platforms entries and employer treatments for all eight Professional Experience entries.
+- Used seven sourced employer logos and an official-name treatment for Eagle Rocket because no verified public logo was available.
+- Recorded asset provenance in `assets/brands/README.md` and added lean content and browser QA scripts.
+
+### Verification
+
+- `node scripts/verify-v2-content.mjs` passed for 141 authoritative content fragments, 16 links, 18 tool logos, and 8 experience brand treatments.
+- `node scripts/qa-v2.mjs` passed at 1440x1000, 1024x1100, 768x1024, and 375x812 with zero overflow, broken images, out-of-bounds elements, browser errors, missing internal targets, unsafe new-tab links, or heading-order failures.
+- Mobile menu open, Escape-close, focus return, visible focus, and reduced-motion behavior passed.
+- `node --check v2/script.js`, `node --check scripts/qa-v2.mjs`, and `git diff --check` passed.
+
+### Decisions
+
+- Preserve V1 at the repository root and isolate the new direction under `v2/` until Keanan approves promotion.
+- Store all marks locally so the page does not rely on runtime third-party image services.
+- Standardize visual containers rather than distorting source marks to identical dimensions.
+
+### Pending
+
+- Keanan reviews the enhanced V2 design.
+- Do not promote V2 to the root or public GitHub Pages URL without explicit approval.
+- Context Projection remains unresolved for CU1.
+
+### Limitations
+
+- Eagle Rocket has no verified sourced logo in this version; its official name is used as a typographic wordmark.
+- The current public URL continues to serve V1.

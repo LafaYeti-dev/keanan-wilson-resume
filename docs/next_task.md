@@ -1,5 +1,20 @@
 # Approved Next Task
 
+## Review Dark Logo V2
+
+A separate, non-production V2 is ready at `http://127.0.0.1:4173/v2/` on `codex/resume-dark-logo-v2`. Review its executive-dossier hero with identity, CTA, and portrait on the left and the complete Professional Summary on the right; the numbered anchor strip remains separate below. Also review the standardized tool marks and employer-logo treatment. Do not replace the root production page until Keanan explicitly approves promotion.
+
+### V2 review evidence
+
+- Content verification: 141 authoritative fragments, 16 links, 18 tool logos, and 8 experience brand treatments passed.
+- Browser verification: 1440x1000, 1024x1100, 768x1024, and 375x812 passed with no overflow, broken imagery, browser errors, missing internal targets, or keyboard-navigation failures.
+- Production impact: none; `index.html`, `styles.css`, and `script.js` at the repository root are unchanged.
+- Known limitation: no verified Eagle Rocket logo was found, so V2 uses its official name as a restrained typographic treatment rather than inventing a mark.
+
+### Exact V2 action
+
+Keanan reviews the V2 working copy and either approves it for a future promotion change or requests a focused design revision. Context Projection remains the formal unresolved CU1 completion item.
+
 ## Resolve Context Projection
 
 CU1 - Static Resume Landing Page v1 is live with Keanan's requested 25% global text reduction and 50% hero-name reduction. The revision is merged and production-verified. Context Projection is the only remaining completion item.
