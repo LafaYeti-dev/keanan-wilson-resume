@@ -386,7 +386,8 @@ No technical blocker. Project screenshots and visual assets can be added during 
 
 - Created `codex/resume-dark-logo-v2` and kept the live root resume unchanged.
 - Added a separate `v2/` working copy using charcoal, navy, and cool-blue accents.
-- Rebuilt the hero so Keanan's identity and CTA are followed directly by a self-contained landscape portrait module; the numbered page anchors are restored as a separate full-width navigation strip below it.
+- Rebuilt the hero as an executive dossier: Keanan's identity, CTA, and self-contained landscape portrait form the left rail while the complete Professional Summary is visible in a structured navy field on the right.
+- Restored the numbered page anchors as a separate full-width navigation strip below the hero rather than combining them with the portrait.
 - Added consistent local marks for all 18 Tools & Platforms entries and employer treatments for all eight Professional Experience entries.
 - Used seven sourced employer logos and an official-name treatment for Eagle Rocket because no verified public logo was available.
 - Recorded asset provenance in `assets/brands/README.md` and added lean content and browser QA scripts.

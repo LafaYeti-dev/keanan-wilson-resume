@@ -222,6 +222,15 @@ try {
     const screenshot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
     await writeFile(join(outputDir, `${viewport.name}.png`), Buffer.from(screenshot.data, 'base64'));
 
+    if (viewport.name === 'desktop') {
+      for (const sectionId of ['toolkit', 'evidence', 'experience']) {
+        await evaluate(`document.getElementById('${sectionId}').scrollIntoView()`);
+        await new Promise((resolve) => setTimeout(resolve, 120));
+        const sectionScreenshot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+        await writeFile(join(outputDir, `desktop-${sectionId}.png`), Buffer.from(sectionScreenshot.data, 'base64'));
+      }
+    }
+
     if (viewport.name === 'mobile') {
       const menuResult = await evaluate(`(async () => {
         const toggle = document.querySelector('.menu-toggle');

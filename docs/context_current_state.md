@@ -20,7 +20,7 @@ A separate dark V2 working copy is ready for design review on `codex/resume-dark
 
 ## V2 design working copy
 
-- Charcoal and navy editorial theme with the identity and CTA followed directly by a self-contained landscape portrait module; numbered page anchors now occupy a separate navigation strip below the hero.
+- Charcoal and navy executive-dossier theme: identity, CTA, and a self-contained landscape portrait module occupy the left rail while the complete Professional Summary is immediately visible in a structured navy field on the right; numbered page anchors occupy a separate navigation strip below the hero.
 - Standardized local logo presentation for all 18 approved Tools & Platforms entries.
 - Professional Experience includes seven verified employer marks plus a typographic Eagle Rocket name treatment because no verified public logo was found.
 - Existing source wording, all 141 authoritative content fragments, and all 16 approved links remain intact.

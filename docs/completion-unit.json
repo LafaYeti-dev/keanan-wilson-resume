@@ -39,7 +39,7 @@
       "path": "v2/",
       "preview": "http://127.0.0.1:4173/v2/",
       "productionImpact": "none; repository-root V1 files are unchanged",
-      "verification": "141 authoritative fragments, 16 links, 18 tool logos, and 8 experience brand treatments verified; separated portrait and page-anchor modules; browser QA passed at 1440x1000, 1024x1100, 768x1024, and 375x812"
+      "verification": "141 authoritative fragments, 16 links, 18 tool logos, and 8 experience brand treatments verified; executive-dossier hero integrates the full Professional Summary while keeping portrait and page-anchor modules separate; browser QA passed at 1440x1000, 1024x1100, 768x1024, and 375x812"
     },
     "files": [
       "index.html",
