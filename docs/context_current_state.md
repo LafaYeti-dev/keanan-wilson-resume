@@ -4,6 +4,8 @@
 
 CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/keanan-wilson-resume/`. The Lead Technical Project Manager content revision is deployed, with Good to Great Schools Australia first in Professional Experience and its company-context links removed. Keanan's approved portrait is integrated into the responsive hero. CU1 is not claimed closed because required Context Projection remains pending.
 
+A separate dark V2 working copy is ready for design review on `codex/resume-dark-logo-v2` under `v2/`. It does not replace or alter the production page at the repository root.
+
 ## Verified repository state
 
 - Repository: `LafaYeti-dev/keanan-wilson-resume`
@@ -14,6 +16,18 @@ CU1 - Static Resume Landing Page v1 is live at `https://lafayeti-dev.github.io/k
 - Build system and runtime dependencies: none
 - Local preview: `http://127.0.0.1:4173/`
 - Public URL: `https://lafayeti-dev.github.io/keanan-wilson-resume/`
+- V2 local preview: `http://127.0.0.1:4173/v2/`
+
+## V2 design working copy
+
+- Charcoal and navy editorial theme with a larger portrait-led hero, visible next-section cue, restrained cool-blue accents, and no gradients or external fonts.
+- Standardized local logo presentation for all 18 approved Tools & Platforms entries.
+- Professional Experience includes seven verified employer marks plus a typographic Eagle Rocket name treatment because no verified public logo was found.
+- Existing source wording, all 141 authoritative content fragments, and all 16 approved links remain intact.
+- The root production files remain unchanged; V2 is isolated to `v2/`, `assets/brands/`, and two lean verification scripts.
+- Browser QA passed at 1440x1000, 768x1024, and 375x812 with no overflow, broken images, out-of-bounds elements, browser errors, invalid internal targets, or unsafe new-tab links.
+- Mobile navigation, focus visibility, Escape behavior, heading order, reduced motion, and the absence of any PDF link were verified.
+- Brand provenance and the Eagle Rocket limitation are recorded in `assets/brands/README.md`.
 
 ## Implemented experience
 
