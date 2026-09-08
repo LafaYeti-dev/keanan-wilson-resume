@@ -143,6 +143,7 @@ try {
 
   for (const viewport of [
     { name: 'desktop', width: 1440, height: 1000 },
+    { name: 'compact-desktop', width: 1024, height: 1100 },
     { name: 'tablet', width: 768, height: 1024 },
     { name: 'mobile', width: 375, height: 812 },
   ]) {
@@ -256,7 +257,7 @@ try {
     failures.forEach((failure) => console.error(`- ${failure}`));
     process.exitCode = 1;
   } else {
-    console.log(`V2 browser QA passed at 1440px, 768px, and 375px.`);
+    console.log(`V2 browser QA passed at 1440px, 1024px, 768px, and 375px.`);
     console.log(`Verified 18 tool logos, 8 experience treatments, zero broken images, zero overflow, mobile keyboard navigation, reduced motion, and zero browser errors.`);
     console.log(`Screenshots: ${outputDir}`);
   }

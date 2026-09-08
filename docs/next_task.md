@@ -2,12 +2,12 @@
 
 ## Review Dark Logo V2
 
-A separate, non-production V2 is ready at `http://127.0.0.1:4173/v2/` on `codex/resume-dark-logo-v2`. Review its enhanced charcoal/navy direction, portrait-led hero, standardized tool marks, and employer-logo treatment. Do not replace the root production page until Keanan explicitly approves promotion.
+A separate, non-production V2 is ready at `http://127.0.0.1:4173/v2/` on `codex/resume-dark-logo-v2`. Review its enhanced charcoal/navy direction, standalone portrait module directly below the CTA, separate numbered anchor strip, standardized tool marks, and employer-logo treatment. Do not replace the root production page until Keanan explicitly approves promotion.
 
 ### V2 review evidence
 
 - Content verification: 141 authoritative fragments, 16 links, 18 tool logos, and 8 experience brand treatments passed.
-- Browser verification: 1440x1000, 768x1024, and 375x812 passed with no overflow, broken imagery, browser errors, missing internal targets, or keyboard-navigation failures.
+- Browser verification: 1440x1000, 1024x1100, 768x1024, and 375x812 passed with no overflow, broken imagery, browser errors, missing internal targets, or keyboard-navigation failures.
 - Production impact: none; `index.html`, `styles.css`, and `script.js` at the repository root are unchanged.
 - Known limitation: no verified Eagle Rocket logo was found, so V2 uses its official name as a restrained typographic treatment rather than inventing a mark.
 

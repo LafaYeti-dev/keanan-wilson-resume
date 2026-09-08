@@ -385,7 +385,8 @@ No technical blocker. Project screenshots and visual assets can be added during 
 ### Completed
 
 - Created `codex/resume-dark-logo-v2` and kept the live root resume unchanged.
-- Added a separate `v2/` working copy using charcoal, navy, and cool-blue accents with a larger editorial portrait treatment and a tighter first-viewport composition.
+- Added a separate `v2/` working copy using charcoal, navy, and cool-blue accents.
+- Rebuilt the hero so Keanan's identity and CTA are followed directly by a self-contained landscape portrait module; the numbered page anchors are restored as a separate full-width navigation strip below it.
 - Added consistent local marks for all 18 Tools & Platforms entries and employer treatments for all eight Professional Experience entries.
 - Used seven sourced employer logos and an official-name treatment for Eagle Rocket because no verified public logo was available.
 - Recorded asset provenance in `assets/brands/README.md` and added lean content and browser QA scripts.
@@ -393,7 +394,7 @@ No technical blocker. Project screenshots and visual assets can be added during 
 ### Verification
 
 - `node scripts/verify-v2-content.mjs` passed for 141 authoritative content fragments, 16 links, 18 tool logos, and 8 experience brand treatments.
-- `node scripts/qa-v2.mjs` passed at 1440x1000, 768x1024, and 375x812 with zero overflow, broken images, out-of-bounds elements, browser errors, missing internal targets, unsafe new-tab links, or heading-order failures.
+- `node scripts/qa-v2.mjs` passed at 1440x1000, 1024x1100, 768x1024, and 375x812 with zero overflow, broken images, out-of-bounds elements, browser errors, missing internal targets, unsafe new-tab links, or heading-order failures.
 - Mobile menu open, Escape-close, focus return, visible focus, and reduced-motion behavior passed.
 - `node --check v2/script.js`, `node --check scripts/qa-v2.mjs`, and `git diff --check` passed.
 

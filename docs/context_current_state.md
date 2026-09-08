@@ -20,12 +20,12 @@ A separate dark V2 working copy is ready for design review on `codex/resume-dark
 
 ## V2 design working copy
 
-- Charcoal and navy editorial theme with a larger portrait-led hero, visible next-section cue, restrained cool-blue accents, and no gradients or external fonts.
+- Charcoal and navy editorial theme with the identity and CTA followed directly by a self-contained landscape portrait module; numbered page anchors now occupy a separate navigation strip below the hero.
 - Standardized local logo presentation for all 18 approved Tools & Platforms entries.
 - Professional Experience includes seven verified employer marks plus a typographic Eagle Rocket name treatment because no verified public logo was found.
 - Existing source wording, all 141 authoritative content fragments, and all 16 approved links remain intact.
 - The root production files remain unchanged; V2 is isolated to `v2/`, `assets/brands/`, and two lean verification scripts.
-- Browser QA passed at 1440x1000, 768x1024, and 375x812 with no overflow, broken images, out-of-bounds elements, browser errors, invalid internal targets, or unsafe new-tab links.
+- Browser QA passed at 1440x1000, 1024x1100, 768x1024, and 375x812 with no overflow, broken images, out-of-bounds elements, browser errors, invalid internal targets, or unsafe new-tab links.
 - Mobile navigation, focus visibility, Escape behavior, heading order, reduced motion, and the absence of any PDF link were verified.
 - Brand provenance and the Eagle Rocket limitation are recorded in `assets/brands/README.md`.
 

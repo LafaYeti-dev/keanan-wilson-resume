@@ -64,7 +64,7 @@ if (experienceBrandCount !== 8) {
   missingRequirements.push(`Expected 8 experience brand treatments, found ${experienceBrandCount}.`);
 }
 
-if (!page.includes('href="./styles.css?v=20260908-3"')) {
+if (!page.includes('href="./styles.css?v=20260908-4"')) {
   missingRequirements.push('Missing versioned v2 stylesheet reference.');
 }
 
